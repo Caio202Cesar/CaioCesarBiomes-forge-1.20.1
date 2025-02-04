@@ -1,6 +1,9 @@
 package net.caiocesarmods.caiocesarbiomes;
 
 import com.mojang.logging.LogUtils;
+import net.caiocesarmods.caiocesarbiomes.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -14,18 +17,21 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(CaioCesarBiomesMod.MODID)
+@Mod(CaioCesarBiomesMod.MOD_ID)
 public class CaioCesarBiomesMod {
-    public static final String MODID = "caiocesarbiomes";
+    public static final String MOD_ID = "caiocesarbiomes";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public CaioCesarBiomesMod(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
+
         modEventBus.addListener(this::addCreative);
 
     }
@@ -36,6 +42,15 @@ public class CaioCesarBiomesMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.accept(ModItems.AVOCADO);
+            event.accept(ModItems.ARBUTUS);
+            event.accept(ModItems.FIG);
+            event.accept(ModItems.BLACK_CURRANT);
+            event.accept(ModItems.RED_CURRANT);
+            event.accept(ModItems.ELDERBERRIES);
+
+        }
 
     }
 
@@ -46,7 +61,7 @@ public class CaioCesarBiomesMod {
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
