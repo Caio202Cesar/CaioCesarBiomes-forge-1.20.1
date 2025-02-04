@@ -22,7 +22,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ARAUCARIA_LOG.get())
                 .add(ModBlocks.ARAUCARIA_WOOD.get())
                 .add(ModBlocks.STRIPPED_ARAUCARIA_LOG.get())
-                .add(ModBlocks.STRIPPED_ARAUCARIA_WOOD.get());
+                .add(ModBlocks.STRIPPED_ARAUCARIA_WOOD.get())
+                .add(ModBlocks.NOTHOFAGUS_LOG.get())
+                .add(ModBlocks.STRIPPED_NOTHOFAGUS_LOG.get())
+                .add(ModBlocks.NOTHOFAGUS_WOOD.get())
+                .add(ModBlocks.STRIPPED_NOTHOFAGUS_WOOD.get())
+
+        ;
 
         this.tag(BlockTags.PLANKS)
                 .add(ModBlocks.ARAUCARIA_PLANKS.get());
