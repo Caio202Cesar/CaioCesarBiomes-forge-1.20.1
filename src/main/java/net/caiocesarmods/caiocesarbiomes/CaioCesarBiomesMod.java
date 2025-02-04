@@ -1,6 +1,7 @@
 package net.caiocesarmods.caiocesarbiomes;
 
 import com.mojang.logging.LogUtils;
+import net.caiocesarmods.caiocesarbiomes.item.ModCreativeModeTabs;
 import net.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -26,6 +27,7 @@ public class CaioCesarBiomesMod {
     {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
