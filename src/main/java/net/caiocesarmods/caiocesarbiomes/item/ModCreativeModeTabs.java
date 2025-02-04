@@ -1,6 +1,7 @@
 package net.caiocesarmods.caiocesarbiomes.item;
 
 import net.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import net.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -17,6 +18,14 @@ public class ModCreativeModeTabs {
             .register("caio_cesar_biomes_tab", () -> CreativeModeTab.builder().icon(() ->
                     new ItemStack(ModItems.AVOCADO.get())).title(Component.translatable("creativetab.caio_cesar_biomes_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+
+                        output.accept(ModBlocks.ARAUCARIA_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_ARAUCARIA_LOG.get());
+                        output.accept(ModBlocks.ARAUCARIA_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_ARAUCARIA_WOOD.get());
+                        output.accept(ModBlocks.ARAUCARIA_PLANKS.get());
+                        output.accept(ModBlocks.MONKEY_PUZZLE_LEAVES.get());
+
 
                     })
                     .build());
