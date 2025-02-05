@@ -2,11 +2,13 @@ package net.caiocesarmods.caiocesarbiomes.block;
 
 import net.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import net.caiocesarmods.caiocesarbiomes.item.ModItems;
+import net.caiocesarmods.caiocesarbiomes.worldgen.tree.MonkeyPuzzleTreeGrower;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LeavesBlock;
+import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -32,6 +34,8 @@ public class ModBlocks {
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> MONKEY_PUZZLE_LEAVES = registerBlock("monkey_puzzle_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> MONKEY_PUZZLE_SAPLING = registerBlock("monkey_puzzle_sapling",
+            () -> new SaplingBlock(new MonkeyPuzzleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     public static final RegistryObject<Block> NOTHOFAGUS_LOG = registerBlock("nothofagus_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
@@ -43,9 +47,9 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> NOTHOFAGUS_PLANKS = registerBlock("nothofagus_planks",
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
-    public static final RegistryObject<Block> LENGA_BEECH_AUTUMNAL_LEAVES = registerBlock("lenga_beech_autumnal_leaves",
+    public static final RegistryObject<Block> CRIMSON_SOUTHERN_BEECH_AUTUMNAL_LEAVES = registerBlock("crimson_beech_autumnal_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
-    public static final RegistryObject<Block> ANTARTIC_BEECH_AUTUMNAL_LEAVES = registerBlock("antartic_beech_autumnal_leaves",
+    public static final RegistryObject<Block> ORANGE_SOUTHERN_BEECH_AUTUMNAL_LEAVES = registerBlock("orange_beech_autumnal_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> SOUTHERN_BEECH_LEAVES = registerBlock("southern_beech_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
@@ -88,6 +92,11 @@ public class ModBlocks {
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> OLEANDER_RED_LEAVES = registerBlock("oleander_red_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+
+    public static final RegistryObject<Block> ROYAL_POINCIANA_LOG = registerBlock("royal_poinciana_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> ROYAL_POINCIANA_PLANKS = registerBlock("oleander_planks",
+            () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -19,6 +19,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_ARAUCARIA_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_ARAUCARIA_WOOD.get());
         this.dropSelf(ModBlocks.ARAUCARIA_PLANKS.get());
+        this.dropSelf(ModBlocks.MONKEY_PUZZLE_SAPLING.get());
+        this.add(ModBlocks.MONKEY_PUZZLE_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.MONKEY_PUZZLE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.dropSelf(ModBlocks.NOTHOFAGUS_LOG.get());
         this.dropSelf(ModBlocks.NOTHOFAGUS_WOOD.get());
