@@ -1,6 +1,8 @@
 package net.caiocesarmods.caiocesarbiomes.worldgen.biome;
 
 import net.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import net.caiocesarmods.caiocesarbiomes.worldgen.feature.ModBiomeDefaultFeatures;
+import net.caiocesarmods.caiocesarbiomes.worldgen.feature.ModVegetationPlacements;
 import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
@@ -48,11 +50,10 @@ public class ModBiomes {
         BiomeDefaultFeatures.addFerns(biomeBuilder);
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
 
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.TREES_PLAINS);
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModVegetationPlacements.TREES_MONKEY_PUZZLE);
 
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.PINE_PLACED_KEY);
 
         BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
         BiomeDefaultFeatures.addInfestedStone(biomeBuilder);
