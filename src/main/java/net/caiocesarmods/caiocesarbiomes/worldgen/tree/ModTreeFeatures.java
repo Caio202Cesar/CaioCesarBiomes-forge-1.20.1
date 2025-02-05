@@ -60,5 +60,4 @@ public class ModTreeFeatures {
                 BlockStateProvider.simple(ModBlocks.CRIMSON_SOUTHERN_BEECH_AUTUMNAL_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 4),
                 new TwoLayersFeatureSize(0, 0, 0)).build());
-
     }}

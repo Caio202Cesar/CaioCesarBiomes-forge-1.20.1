@@ -18,14 +18,7 @@ import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    //See TreePlacements.java
-    public static final ResourceKey<PlacedFeature> MONKEY_PUZZLE_CHECKED = PlacementUtils.createKey("monkey_puzzle_placed");
-    public static final ResourceKey<PlacedFeature> YOUNG_MONKEY_PUZZLE_PLACED_KEY = PlacementUtils.createKey("young_monkey_puzzle_placed");
-
     public static void bootstrap(BootstapContext<ConfiguredFeature> context) {
-        HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
-
-        Holder<PlacedFeature>
     }
 
 
