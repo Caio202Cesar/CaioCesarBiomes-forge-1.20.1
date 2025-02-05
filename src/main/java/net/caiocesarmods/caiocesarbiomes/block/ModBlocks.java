@@ -2,12 +2,11 @@ package net.caiocesarmods.caiocesarbiomes.block;
 
 import net.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import net.caiocesarmods.caiocesarbiomes.item.ModItems;
-import net.caiocesarmods.caiocesarbiomes.worldgen.tree.MonkeyPuzzleTreeGrower;
+import net.caiocesarmods.caiocesarbiomes.worldgen.tree.TreeGrowers.MonkeyPuzzleTreeGrower;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
