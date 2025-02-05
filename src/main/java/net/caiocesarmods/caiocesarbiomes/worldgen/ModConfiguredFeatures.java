@@ -20,6 +20,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
@@ -73,7 +74,11 @@ public class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(0, 0, 0)).build());
     }
 
-    //Vegetation Features
+    //Biomes Vegetation
+    public static final ResourceKey<ConfiguredFeature<RandomFeatureConfiguration, ?>> MONKEY_PUZZLE_TREES =
+            FeatureUtils.register("monkey_puzzle_trees", Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(
+                    new WeightedPlacedFeature[]{}
+            )));
 
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
