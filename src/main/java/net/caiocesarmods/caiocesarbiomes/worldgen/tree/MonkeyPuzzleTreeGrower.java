@@ -12,9 +12,9 @@ public class MonkeyPuzzleTreeGrower extends AbstractTreeGrower {
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomSource, boolean b) {
         if (randomSource.nextInt(10) == 0) {
-            return ModConfiguredFeatures.MONKEY_PUZZLE_KEY;
+            return ModTreeFeatures.MONKEY_PUZZLE_KEY;
         } else {
-            return ModConfiguredFeatures.YOUNG_MONKEY_PUZZLE_KEY;
+            return ModTreeFeatures.YOUNG_MONKEY_PUZZLE_KEY;
         }
     }
 }

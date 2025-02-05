@@ -18,14 +18,14 @@ import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static final ResourceKey<PlacedFeature> MONKEY_PUZZLE_PLACED_KEY = registerKey("monkey_puzzle_placed");
+    //See TreePlacements.java
+    public static final ResourceKey<PlacedFeature> MONKEY_PUZZLE_CHECKED = PlacementUtils.createKey("monkey_puzzle_placed");
+    public static final ResourceKey<PlacedFeature> YOUNG_MONKEY_PUZZLE_PLACED_KEY = PlacementUtils.createKey("young_monkey_puzzle_placed");
 
-    public static void bootstrap(BootstapContext<PlacedFeature> context) {
+    public static void bootstrap(BootstapContext<ConfiguredFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        register(context, MONKEY_PUZZLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
-                        ModBlocks.MONKEY_PUZZLE_SAPLING.get()));
+        Holder<PlacedFeature>
     }
 
 
