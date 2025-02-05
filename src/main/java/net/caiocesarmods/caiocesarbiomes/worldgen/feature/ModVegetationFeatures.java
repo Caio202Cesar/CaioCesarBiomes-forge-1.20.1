@@ -1,6 +1,6 @@
-package net.caiocesarmods.caiocesarbiomes.worldgen;
+package net.caiocesarmods.caiocesarbiomes.worldgen.feature;
 
-import net.caiocesarmods.caiocesarbiomes.worldgen.tree.ModTreePlacements;
+import net.caiocesarmods.caiocesarbiomes.worldgen.feature.tree.ModTreePlacements;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;

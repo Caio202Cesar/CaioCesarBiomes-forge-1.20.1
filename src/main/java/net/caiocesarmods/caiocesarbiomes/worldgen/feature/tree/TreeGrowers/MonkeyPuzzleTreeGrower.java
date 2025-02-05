@@ -1,6 +1,6 @@
-package net.caiocesarmods.caiocesarbiomes.worldgen.tree.TreeGrowers;
+package net.caiocesarmods.caiocesarbiomes.worldgen.feature.tree.TreeGrowers;
 
-import net.caiocesarmods.caiocesarbiomes.worldgen.tree.ModTreeFeatures;
+import net.caiocesarmods.caiocesarbiomes.worldgen.feature.tree.ModTreeFeatures;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.grower.AbstractTreeGrower;

@@ -1,4 +1,4 @@
-package net.caiocesarmods.caiocesarbiomes.worldgen.tree;
+package net.caiocesarmods.caiocesarbiomes.worldgen.feature.tree;
 
 import net.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.minecraft.core.Holder;

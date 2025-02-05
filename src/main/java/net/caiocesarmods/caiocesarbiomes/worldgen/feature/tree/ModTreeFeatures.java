@@ -1,4 +1,4 @@
-package net.caiocesarmods.caiocesarbiomes.worldgen.tree;
+package net.caiocesarmods.caiocesarbiomes.worldgen.feature.tree;
 
 import com.google.common.collect.ImmutableList;
 import net.caiocesarmods.caiocesarbiomes.block.ModBlocks;
@@ -20,8 +20,6 @@ import net.minecraft.world.level.levelgen.feature.treedecorators.AlterGroundDeco
 import net.minecraft.world.level.levelgen.feature.trunkplacers.BendingTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.GiantTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
-
-import static net.caiocesarmods.caiocesarbiomes.worldgen.ModConfiguredFeatures.registerKey;
 
 public class ModTreeFeatures {
     //Ver TreeFeatures.java

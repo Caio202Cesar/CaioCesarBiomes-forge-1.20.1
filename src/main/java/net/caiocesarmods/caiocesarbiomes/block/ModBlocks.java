@@ -2,7 +2,7 @@ package net.caiocesarmods.caiocesarbiomes.block;
 
 import net.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import net.caiocesarmods.caiocesarbiomes.item.ModItems;
-import net.caiocesarmods.caiocesarbiomes.worldgen.tree.TreeGrowers.MonkeyPuzzleTreeGrower;
+import net.caiocesarmods.caiocesarbiomes.worldgen.feature.tree.TreeGrowers.MonkeyPuzzleTreeGrower;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

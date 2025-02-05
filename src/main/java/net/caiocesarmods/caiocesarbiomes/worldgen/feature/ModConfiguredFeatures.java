@@ -1,4 +1,4 @@
-package net.caiocesarmods.caiocesarbiomes.worldgen;
+package net.caiocesarmods.caiocesarbiomes.worldgen.feature;
 
 import net.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import net.minecraft.core.registries.Registries;

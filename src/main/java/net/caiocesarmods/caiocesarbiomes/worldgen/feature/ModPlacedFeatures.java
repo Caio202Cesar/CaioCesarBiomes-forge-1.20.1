@@ -1,14 +1,9 @@
-package net.caiocesarmods.caiocesarbiomes.worldgen;
+package net.caiocesarmods.caiocesarbiomes.worldgen.feature;
 
 import net.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import net.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.minecraft.core.Holder;
-import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
-import net.minecraft.data.worldgen.features.TreeFeatures;
-import net.minecraft.data.worldgen.placement.PlacementUtils;
-import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
