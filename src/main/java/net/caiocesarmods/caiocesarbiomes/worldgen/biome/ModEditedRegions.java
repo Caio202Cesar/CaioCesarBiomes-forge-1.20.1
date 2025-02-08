@@ -1,6 +1,8 @@
 package net.caiocesarmods.caiocesarbiomes.worldgen.biome;
 
 import com.mojang.datafixers.util.Pair;
+import net.caiocesarmods.caiocesarbiomes.worldgen.biome.ModBiomes.AutumnalPewenGroveBiome;
+import net.caiocesarmods.caiocesarbiomes.worldgen.biome.ModBiomes.TropicalRainforestBiome;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -22,9 +24,9 @@ public class ModEditedRegions extends Region {
             ResourceKey<Biome>>> mapper) {
 //Features: ponderosa pine, juniperus
         this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
-            builder.replaceBiome(Biomes.WOODED_BADLANDS, ModBiomes.NEO_WOODED_BADLANDS);
-            builder.replaceBiome(Biomes.FOREST, ModBiomes.TEMPERATE_SEASONAL_FOREST); //Featuring a more diverse flora, with planes and other trees;
-            builder.replaceBiome(Biomes.JUNGLE, ModBiomes.TROPICAl_RAINFOREST); //Jungle fig trees spawn here and not anymore in their own biome
+            builder.replaceBiome(Biomes.WOODED_BADLANDS, AutumnalPewenGroveBiome.NEO_WOODED_BADLANDS);
+            builder.replaceBiome(Biomes.FOREST, AutumnalPewenGroveBiome.TEMPERATE_SEASONAL_FOREST); //Featuring a more diverse flora, with planes and other trees;
+            builder.replaceBiome(Biomes.JUNGLE, TropicalRainforestBiome.TROPICAL_RAINFOREST); //Jungle fig trees spawn here and not anymore in their own biome
 
         });
     }

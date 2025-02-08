@@ -1,6 +1,7 @@
-package net.caiocesarmods.caiocesarbiomes.worldgen.biome;
+package net.caiocesarmods.caiocesarbiomes.worldgen.biome.ModBiomes;
 
 import net.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.ModBiomeDefaultFeatures;
 import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.ModVegetationPlacements;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
@@ -12,12 +13,14 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
 
-public class ModBiomes {
-    public static final ResourceKey<Biome> AUTUMNAL_PEWEN_CONIFEROUS_GROVE = ResourceKey.create(Registries.BIOME,
-            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "autumnal_pewen_coniferous_grove"));
+import static net.minecraft.data.worldgen.biome.OverworldBiomes.jungle;
+
+public class TropicalRainforestBiome {
+    public static final ResourceKey<Biome> TROPICAL_RAINFOREST = ResourceKey.create(Registries.BIOME,
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "tropical_rainforest"));
 
     public static void bootstrap(BootstapContext<Biome> context) {
-        context.register(AUTUMNAL_PEWEN_CONIFEROUS_GROVE, autumnalPewenConiferousGroveBiome(context));
+        context.register(TROPICAL_RAINFOREST, tropicalRainforest(context));
     }
 
     public static void globalOverworldGeneration(BiomeGenerationSettings.Builder builder) {
@@ -26,10 +29,9 @@ public class ModBiomes {
         BiomeDefaultFeatures.addDefaultMonsterRoom(builder);
         BiomeDefaultFeatures.addDefaultUndergroundVariety(builder);
         BiomeDefaultFeatures.addDefaultSprings(builder);
-        BiomeDefaultFeatures.addSurfaceFreezing(builder);
     }
 
-    public static Biome autumnalPewenConiferousGroveBiome(BootstapContext<Biome> context) {
+    public static Biome tropicalRainforest(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.LLAMA, 5, 4, 4));
@@ -46,10 +48,10 @@ public class ModBiomes {
         BiomeDefaultFeatures.addFerns(biomeBuilder);
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
 
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModVegetationPlacements.TREES_MONKEY_PUZZLE);
-
+//Add jungle biome features
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
+        ModBiomeDefaultFeatures.addJungleFigTrees(biomeBuilder);
 
         BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
         BiomeDefaultFeatures.addInfestedStone(biomeBuilder);
@@ -69,6 +71,4 @@ public class ModBiomes {
                         .fogColor(0x22a1e6)
                         .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS).build()).build();
     }
-
-
 }
