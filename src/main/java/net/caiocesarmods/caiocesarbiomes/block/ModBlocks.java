@@ -2,7 +2,9 @@ package net.caiocesarmods.caiocesarbiomes.block;
 
 import net.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import net.caiocesarmods.caiocesarbiomes.item.ModItems;
-import net.caiocesarmods.caiocesarbiomes.worldgen.feature.tree.TreeGrowers.MonkeyPuzzleTreeGrower;
+import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.tree.TreeGrowers.IndianLaurelTreeGrower;
+import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.tree.TreeGrowers.MonkeyPuzzleTreeGrower;
+import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.tree.TreeGrowers.WeepingFigTreeGrower;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -97,14 +99,26 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> JUNGLE_FIG_LOG = registerBlock("jungle_fig_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_FIG_LOG = registerBlock("stripped_fig_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> FIG_WOOD = registerBlock("fig_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> JUNGLE_FIG_WOOD = registerBlock("jungle_fig_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_FIG_WOOD = registerBlock("stripped_fig_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> FIG_PLANKS = registerBlock("fig_planks",
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
-    public static final RegistryObject<Block> FIG_LEAVES = registerBlock("fig_log",
+    public static final RegistryObject<Block> FIG_LEAVES = registerBlock("fig_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> WEEPING_FIG_LEAVES = registerBlock("weeping_fig_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> WEEPING_FIG_SAPLING = registerBlock("weeping_fig_sapling",
+            () -> new SaplingBlock(new WeepingFigTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Block> INDIAN_LAUREL_LEAVES = registerBlock("indian_laurel_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> INDIAN_LAUREL_SAPLING = registerBlock("indian_laurel_sapling",
+            () -> new SaplingBlock(new IndianLaurelTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Block> FICUS_ROOTS = registerBlock("ficus_roots",
             () -> new WeepingVinesBlock(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES)));
     public static final RegistryObject<Block> FICUS_ROOTS_PLANT = registerBlock("ficus_roots_plant",
@@ -169,7 +183,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> KERMES_OAK_LEAVES = registerBlock("kermes_oak_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
-    //Temperate Seasonal Forest features
+    //Temperate Seasonal Forest features = that biomes replaces regular forest
     public static final RegistryObject<Block> PLANE_LOG = registerBlock("plane_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> PLANE_WOOD = registerBlock("plane_wood",
@@ -211,6 +225,21 @@ public class ModBlocks {
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> SWEET_CHESTNUT_LEAVES = registerBlock("plane_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+
+    public static final RegistryObject<Block> MYRTLE_LOG = registerBlock("myrtle_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> MYRTLE_WOOD = registerBlock("myrtle_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_MYRTLE_LOG = registerBlock("stripped_myrtle_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_SWEET_CHESTNUT_WOOD = registerBlock("stripped_plane_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> SWEET_CHESTNUT_PLANKS = registerBlock("plane_planks",
+            () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final RegistryObject<Block> SWEET_CHESTNUT_LEAVES = registerBlock("plane_leaves",
+            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+
+    //Tropical Rainforest (replaces Jungle)
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

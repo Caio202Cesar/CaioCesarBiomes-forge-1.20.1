@@ -1,16 +1,12 @@
 package net.caiocesarmods.caiocesarbiomes.worldgen.biome;
 
 import net.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import net.caiocesarmods.caiocesarbiomes.worldgen.feature.ModBiomeDefaultFeatures;
-import net.caiocesarmods.caiocesarbiomes.worldgen.feature.ModVegetationPlacements;
-import net.minecraft.client.resources.sounds.Sound;
+import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.ModVegetationPlacements;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.BootstapContext;
-import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.Musics;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;

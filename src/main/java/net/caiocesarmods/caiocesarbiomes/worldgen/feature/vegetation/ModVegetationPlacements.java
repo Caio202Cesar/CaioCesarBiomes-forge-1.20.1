@@ -1,4 +1,4 @@
-package net.caiocesarmods.caiocesarbiomes.worldgen.feature;
+package net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
