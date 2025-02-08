@@ -198,6 +198,21 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRABAPPLE_WHITE_LEAVES = registerBlock("crabapple_white_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
+    //Sweet Chestnut, just as Liquambar, also gens in Subtropical Seasonal Forest
+    public static final RegistryObject<Block> SWEET_CHESTNUT_LOG = registerBlock("plane_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> SWEET_CHESTNUT_WOOD = registerBlock("plane_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_SWEET_CHESTNUT_LOG = registerBlock("stripped_plane_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_SWEET_CHESTNUT_WOOD = registerBlock("stripped_plane_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> SWEET_CHESTNUT_PLANKS = registerBlock("plane_planks",
+            () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final RegistryObject<Block> SWEET_CHESTNUT_LEAVES = registerBlock("plane_leaves",
+            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
