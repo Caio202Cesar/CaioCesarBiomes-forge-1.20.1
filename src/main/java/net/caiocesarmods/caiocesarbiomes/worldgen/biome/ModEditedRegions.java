@@ -20,10 +20,12 @@ public class ModEditedRegions extends Region {
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint,
             ResourceKey<Biome>>> mapper) {
-
+//Features: ponderosa pine, juniperus
         this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
             builder.replaceBiome(Biomes.WOODED_BADLANDS, ModBiomes.NEO_WOODED_BADLANDS);
-            //Features: ponderosa pine, juniperus
+            builder.replaceBiome(Biomes.FOREST, ModBiomes.TEMPERATE_SEASONAL_FOREST);
+            builder.replaceBiome(Biomes.DESERT, ModBiomes.SUBTROPICAL_DESERT);
+
         });
     }
 }

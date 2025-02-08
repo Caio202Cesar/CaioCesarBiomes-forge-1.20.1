@@ -102,5 +102,6 @@ public class ModTreeFeatures {
 
         //Oak Shrubs
 
+        //Plane Tree (neo-forest feature, one fancy and other blob, just like oak)
 
     }}
