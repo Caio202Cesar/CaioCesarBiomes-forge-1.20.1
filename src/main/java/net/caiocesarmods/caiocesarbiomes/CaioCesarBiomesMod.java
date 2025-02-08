@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.caiocesarmods.caiocesarbiomes.item.ModCreativeModeTabs;
 import net.caiocesarmods.caiocesarbiomes.item.ModItems;
+import net.caiocesarmods.caiocesarbiomes.worldgen.biome.ModTerrablender;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -32,6 +33,8 @@ public class CaioCesarBiomesMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModTerrablender.registerBiomes();
 
         modEventBus.addListener(this::commonSetup);
 

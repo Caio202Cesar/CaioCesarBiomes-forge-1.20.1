@@ -16,7 +16,6 @@ public class ModPlacedFeatures {
     public static void bootstrap(BootstapContext<ConfiguredFeature> context) {
     }
 
-
     private static ResourceKey<PlacedFeature> registerKey(String name) {
         return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(CaioCesarBiomesMod.MOD_ID, name));
     }
