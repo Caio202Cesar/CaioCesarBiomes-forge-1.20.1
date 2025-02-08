@@ -23,7 +23,7 @@ public class ModEditedRegions extends Region {
 //Features: ponderosa pine, juniperus
         this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
             builder.replaceBiome(Biomes.WOODED_BADLANDS, ModBiomes.NEO_WOODED_BADLANDS);
-            builder.replaceBiome(Biomes.FOREST, ModBiomes.TEMPERATE_SEASONAL_FOREST);
+            builder.replaceBiome(Biomes.FOREST, ModBiomes.TEMPERATE_SEASONAL_FOREST); //Featuring a more diverse flora, with planes and other trees;
             builder.replaceBiome(Biomes.DESERT, ModBiomes.SUBTROPICAL_DESERT);
 
         });
