@@ -239,6 +239,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> TROPICAL_HIBISCUS = registerBlock("tropical_hibiscus",
             () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH)));
+    public static final RegistryObject<Block> SPIDER_LILY = registerBlock("spider_lily",
+            () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH)));
 
     public static final RegistryObject<Block> BASIL = registerBlock("basil",
             () -> new FlowerBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION)));
