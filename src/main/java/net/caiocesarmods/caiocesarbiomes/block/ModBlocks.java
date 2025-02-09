@@ -237,6 +237,25 @@ public class ModBlocks {
     public static final RegistryObject<Block> AVOCADO_LEAVES = registerBlock("avocado_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
+    public static final RegistryObject<Block> CITRUS_LOG = registerBlock("citrus_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> CITRUS_WOOD = registerBlock("citrus_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_CITRUS_LOG = registerBlock("stripped_citrus_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_CITRUS_WOOD = registerBlock("stripped_citrus_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> CITRUS_PLANKS = registerBlock("avocado_planks",
+            () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final RegistryObject<Block> LEMON_LEAVES = registerBlock("lemon_leaves",
+            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> CITRON_LEAVES = registerBlock("citron_leaves",
+            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> BUDDHA_HAND_LEAVES = registerBlock("buddha_hand_leaves",
+            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> TAHITI_LIME_LEAVES = registerBlock("tahiti_lime_leaves",
+            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+
     public static final RegistryObject<Block> TROPICAL_HIBISCUS = registerBlock("tropical_hibiscus",
             () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH)));
     public static final RegistryObject<Block> SPIDER_LILY = registerBlock("spider_lily",
