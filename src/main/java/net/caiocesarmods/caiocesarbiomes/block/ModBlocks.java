@@ -213,33 +213,32 @@ public class ModBlocks {
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
     //Sweet Chestnut, just as Liquambar, also gens in Subtropical Seasonal Forest
-    public static final RegistryObject<Block> SWEET_CHESTNUT_LOG = registerBlock("plane_log",
+    public static final RegistryObject<Block> SWEET_CHESTNUT_LOG = registerBlock("sweet_chestnut_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
-    public static final RegistryObject<Block> SWEET_CHESTNUT_WOOD = registerBlock("plane_wood",
+    public static final RegistryObject<Block> SWEET_CHESTNUT_WOOD = registerBlock("sweet_chestnut_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
-    public static final RegistryObject<Block> STRIPPED_SWEET_CHESTNUT_LOG = registerBlock("stripped_plane_log",
+    public static final RegistryObject<Block> STRIPPED_SWEET_CHESTNUT_LOG = registerBlock("stripped_sweet_chestnut_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
-    public static final RegistryObject<Block> STRIPPED_SWEET_CHESTNUT_WOOD = registerBlock("stripped_plane_wood",
+    public static final RegistryObject<Block> STRIPPED_SWEET_CHESTNUT_WOOD = registerBlock("stripped_sweet_chestnut_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
-    public static final RegistryObject<Block> SWEET_CHESTNUT_PLANKS = registerBlock("plane_planks",
+    public static final RegistryObject<Block> SWEET_CHESTNUT_PLANKS = registerBlock("sweet_chestnut_planks",
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
-    public static final RegistryObject<Block> SWEET_CHESTNUT_LEAVES = registerBlock("plane_leaves",
-            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
-
-    public static final RegistryObject<Block> MYRTLE_LOG = registerBlock("myrtle_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
-    public static final RegistryObject<Block> MYRTLE_WOOD = registerBlock("myrtle_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
-    public static final RegistryObject<Block> STRIPPED_MYRTLE_LOG = registerBlock("stripped_myrtle_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
-    public static final RegistryObject<Block> STRIPPED_SWEET_CHESTNUT_WOOD = registerBlock("stripped_plane_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
-    public static final RegistryObject<Block> SWEET_CHESTNUT_PLANKS = registerBlock("plane_planks",
-            () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
-    public static final RegistryObject<Block> SWEET_CHESTNUT_LEAVES = registerBlock("plane_leaves",
+    public static final RegistryObject<Block> SWEET_CHESTNUT_LEAVES = registerBlock("sweet_chestnut_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
     //Tropical Rainforest (replaces Jungle)
+    public static final RegistryObject<Block> AVOCADO_LOG = registerBlock("avocado_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> AVOCADO_WOOD = registerBlock("avocado_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_AVOCADO_LOG = registerBlock("stripped_avocado_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_AVOCADO_WOOD = registerBlock("stripped_avocado_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> AVOCADO_PLANKS = registerBlock("avocado_planks",
+            () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final RegistryObject<Block> AVOCADO_LEAVES = registerBlock("avocado_leaves",
+            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
