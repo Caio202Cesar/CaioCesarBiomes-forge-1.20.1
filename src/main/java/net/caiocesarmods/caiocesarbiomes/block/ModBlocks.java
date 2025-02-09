@@ -7,10 +7,7 @@ import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.tree.TreeGr
 import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.tree.TreeGrowers.WeepingFigTreeGrower;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SaplingBlock;
-import net.minecraft.world.level.block.WeepingVinesBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -239,6 +236,14 @@ public class ModBlocks {
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> AVOCADO_LEAVES = registerBlock("avocado_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+
+    public static final RegistryObject<Block> TROPICAL_HIBISCUS = registerBlock("tropical_hibiscus",
+            () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH)));
+
+    public static final RegistryObject<Block> BASIL = registerBlock("basil",
+            () -> new FlowerBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION)));
+    public static final RegistryObject<Block> PURPLE_BASIL = registerBlock("purple_basil",
+            () -> new FlowerBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
