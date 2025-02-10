@@ -3,10 +3,11 @@ package net.caiocesarmods.caiocesarbiomes.datagen.loot;
 import net.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
 
-//Ver tutorial sobre DataGen
 public class ModBlockLootTables extends BlockLootSubProvider {
     public ModBlockLootTables() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
@@ -45,5 +46,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.POTTED_BASIL.get(), createPotFlowerItemTable(ModBlocks.BASIL.get()));
         this.dropSelf(ModBlocks.PURPLE_BASIL.get());
         this.add(ModBlocks.POTTED_PURPLE_BASIL.get(), createPotFlowerItemTable(ModBlocks.PURPLE_BASIL.get()));
+    }
+
+    @Override
+    protected Iterable<Block> getKnownBlocks() {
+        return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
 }
