@@ -7,6 +7,8 @@ import net.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.caiocesarmods.caiocesarbiomes.worldgen.biome.ModTerrablender;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -45,6 +47,10 @@ public class CaioCesarBiomesMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.BASIL.getId(), ModBlocks.POTTED_BASIL);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PURPLE_BASIL.getId(), ModBlocks.POTTED_PURPLE_BASIL);
+        });
 
     }
 

@@ -26,6 +26,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ARAUCARIA_PLANKS.get());
                         output.accept(ModBlocks.MONKEY_PUZZLE_LEAVES.get());
 
+                        output.accept(ModBlocks.BASIL.get());
+                        output.accept(ModBlocks.PURPLE_BASIL.get());
+
 
                     })
                     .build());

@@ -40,5 +40,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_STONE_PINE_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_STONE_PINE_WOOD.get());
         this.dropSelf(ModBlocks.STONE_PINE_PLANKS.get());
+
+        this.dropSelf(ModBlocks.BASIL.get());
+        this.add(ModBlocks.POTTED_BASIL.get(), createPotFlowerItemTable(ModBlocks.BASIL.get()));
+        this.dropSelf(ModBlocks.PURPLE_BASIL.get());
+        this.add(ModBlocks.POTTED_PURPLE_BASIL.get(), createPotFlowerItemTable(ModBlocks.PURPLE_BASIL.get()));
     }
 }
