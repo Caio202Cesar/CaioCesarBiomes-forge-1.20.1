@@ -5,6 +5,8 @@ import net.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.tree.TreeGrowers.IndianLaurelTreeGrower;
 import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.tree.TreeGrowers.MonkeyPuzzleTreeGrower;
 import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.tree.TreeGrowers.WeepingFigTreeGrower;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -275,9 +277,21 @@ public class ModBlocks {
             () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH)));
 
     public static final RegistryObject<Block> BASIL = registerBlock("basil",
-            () -> new FlowerBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION)));
+            () -> new FlowerBlock(() -> MobEffects.HERO_OF_THE_VILLAGE, 4,
+                    BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
     public static final RegistryObject<Block> PURPLE_BASIL = registerBlock("purple_basil",
-            () -> new FlowerBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION)));
+            () -> new FlowerBlock(() -> MobEffects.HERO_OF_THE_VILLAGE, 6,
+                    BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> POTTED_BASIL = BLOCKS.register("potted_basil",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.BASIL,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> POTTED_PURPLE_BASIL = registerBlock("potted_purple_basil",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.PURPLE_BASIL,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
+
+    //Temperate Desert
+    //Almond Tree (also Peach tree to the forest)
 
     //Badlands
     public static final RegistryObject<Block> POPLAR_LOG = registerBlock("poplar_log",
@@ -290,8 +304,8 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> POPLAR_PLANKS = registerBlock("poplar_planks",
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
-    public static final RegistryObject<Block> FREMONT_COTTONWOOD_PLANKS = registerBlock("fremont_cottonwood_planks",
-            () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final RegistryObject<Block> FREMONT_COTTONWOOD_LEAVES = registerBlock("fremont_cottonwood_leaves",
+            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
