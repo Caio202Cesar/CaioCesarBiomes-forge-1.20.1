@@ -12,12 +12,12 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
 
-public class AutumnalPewenGroveBiome {
-    public static final ResourceKey<Biome> AUTUMNAL_PEWEN_CONIFEROUS_GROVE = ResourceKey.create(Registries.BIOME,
-            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "autumnal_pewen_coniferous_grove"));
+public class SubtropicalDeciduousForestBiome {
+    public static final ResourceKey<Biome> SUBTROPICAL_DECIDUOUS_FOREST = ResourceKey.create(Registries.BIOME,
+            new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "subtropical_deciduous_forest"));
 
     public static void bootstrap(BootstapContext<Biome> context) {
-        context.register(AUTUMNAL_PEWEN_CONIFEROUS_GROVE, autumnalPewenConiferousGroveBiome(context));
+        context.register(SUBTROPICAL_DECIDUOUS_FOREST, subtropicalDeciduousForestBiome(context));
     }
 
     public static void globalOverworldGeneration(BiomeGenerationSettings.Builder builder) {
@@ -28,7 +28,7 @@ public class AutumnalPewenGroveBiome {
         BiomeDefaultFeatures.addDefaultSprings(builder);
     }
 
-    public static Biome autumnalPewenConiferousGroveBiome(BootstapContext<Biome> context) {
+    public static Biome subtropicalDeciduousForestBiome(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.LLAMA, 5, 4, 4));
