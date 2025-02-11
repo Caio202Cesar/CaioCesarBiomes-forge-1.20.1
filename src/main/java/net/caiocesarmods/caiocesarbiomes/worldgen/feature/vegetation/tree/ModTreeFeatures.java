@@ -67,7 +67,7 @@ public class ModTreeFeatures {
                 .decorators(ImmutableList.of(new AlterGroundDecorator(BlockStateProvider.simple(Blocks.PODZOL)))).build());
 
         //Nothofagus Trees
-        FeatureUtils.register(bootstapContext, WINDSWEPT_AUTUMNAL_CRIMSON_SOUTHERN_BEECH_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+        /*FeatureUtils.register(bootstapContext, WINDSWEPT_AUTUMNAL_CRIMSON_SOUTHERN_BEECH_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.NOTHOFAGUS_LOG.get()),
                 new BendingTrunkPlacer(4, 2, 0, 6, UniformInt.of(1, 2)),
                 BlockStateProvider.simple(ModBlocks.CRIMSON_SOUTHERN_BEECH_AUTUMNAL_LEAVES.get()),
@@ -90,7 +90,7 @@ public class ModTreeFeatures {
                 new StraightTrunkPlacer(4, 2, 0),
                 BlockStateProvider.simple(ModBlocks.ORANGE_SOUTHERN_BEECH_AUTUMNAL_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 4),
-                new TwoLayersFeatureSize(0, 0, 0)).build());
+                new TwoLayersFeatureSize(0, 0, 0)).build());*/
 
         //Jungle Figs
         FeatureUtils.register(bootstapContext, WEEPING_FIG_BIG_KEY, Feature.TREE,
@@ -125,14 +125,14 @@ public class ModTreeFeatures {
 
 
         //Italian Cypress Tree
-        FeatureUtils.register(bootstapContext, ITALIAN_CYPRESS_KEY, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(
+        /*FeatureUtils.register(bootstapContext, ITALIAN_CYPRESS_KEY, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.ITALIAN_CYPRESS_LOG.get()),
                 new StraightTrunkPlacer(16, 2, 1),
                 BlockStateProvider.simple(ModBlocks.ITALIAN_CYPRESS_LEAVES.get()),
                 new SpruceFoliagePlacer(UniformInt.of(1, 0),
                         UniformInt.of(1, 1),
                         UniformInt.of(1, 0)),
-                new TwoLayersFeatureSize(2, 0, 2))).ignoreVines().build());
+                new TwoLayersFeatureSize(2, 0, 2))).ignoreVines().build());*/
 
         //Mediterranean Oaks
 

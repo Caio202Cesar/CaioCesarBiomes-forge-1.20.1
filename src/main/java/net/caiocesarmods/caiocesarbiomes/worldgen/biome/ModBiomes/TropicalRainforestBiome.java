@@ -1,7 +1,7 @@
 package net.caiocesarmods.caiocesarbiomes.worldgen.biome.ModBiomes;
 
 import net.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.ModBiomeDefaultFeatures;
+/*import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.ModBiomeDefaultFeatures;
 import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.ModVegetationPlacements;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
@@ -71,4 +71,4 @@ public class TropicalRainforestBiome {
                         .fogColor(0x22a1e6)
                         .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS).build()).build();
     }
-}
+}*/

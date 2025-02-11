@@ -37,7 +37,7 @@ public class CaioCesarBiomesMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-        ModTerrablender.registerBiomes();
+        //ModTerrablender.registerBiomes();
 
         modEventBus.addListener(this::commonSetup);
 

@@ -1,4 +1,4 @@
-package net.caiocesarmods.caiocesarbiomes.datagen;
+/*package net.caiocesarmods.caiocesarbiomes.datagen;
 
 import net.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import net.caiocesarmods.caiocesarbiomes.worldgen.biome.ModBiomes.AutumnalPewenGroveBiome;
@@ -20,4 +20,4 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
     public ModWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries, Set<String> modIds) {
         super(output, registries, BUILDER, Set.of(CaioCesarBiomesMod.MOD_ID));
     }
-}
+}*/

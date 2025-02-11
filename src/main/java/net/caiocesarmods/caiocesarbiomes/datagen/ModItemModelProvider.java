@@ -37,6 +37,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItemBlockTexture(ModBlocks.BASIL);
         simpleBlockItemBlockTexture(ModBlocks.PURPLE_BASIL);
 
+        saplingItem(ModBlocks.MONKEY_PUZZLE_SAPLING);
+        saplingItem(ModBlocks.INDIAN_LAUREL_SAPLING);
+        saplingItem(ModBlocks.WEEPING_FIG_SAPLING);
+
     }
 
     private void simpleItem(RegistryObject<Item> item) {
@@ -52,6 +56,12 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     private void simpleBlockItemBlockTexture(RegistryObject<Block> item) {
+        withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "block/" + item.getId().getPath()));
+    }
+
+    private void saplingItem(RegistryObject<Block> item) {
         withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "block/" + item.getId().getPath()));

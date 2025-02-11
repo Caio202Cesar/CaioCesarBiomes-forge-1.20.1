@@ -13,7 +13,7 @@ import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static void bootstrap(BootstapContext<ConfiguredFeature> context) {
+    /*public static void bootstrap(BootstapContext<ConfiguredFeature> context) {
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {
@@ -23,5 +23,5 @@ public class ModPlacedFeatures {
     private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
                                  List<PlacementModifier> modifiers) {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
-    }
+    }*/
 }

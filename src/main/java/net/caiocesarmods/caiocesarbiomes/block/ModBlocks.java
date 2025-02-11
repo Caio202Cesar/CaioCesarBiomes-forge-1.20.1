@@ -38,7 +38,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> MONKEY_PUZZLE_SAPLING = registerBlock("monkey_puzzle_sapling",
             () -> new SaplingBlock(new MonkeyPuzzleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
-    public static final RegistryObject<Block> NOTHOFAGUS_LOG = registerBlock("nothofagus_log",
+    /*public static final RegistryObject<Block> NOTHOFAGUS_LOG = registerBlock("nothofagus_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> NOTHOFAGUS_WOOD = registerBlock("nothofagus_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
@@ -88,7 +88,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> STONE_PINE_SAPLING = registerBlock("stone_pine_sapling",
             () -> new SaplingBlock(new StonePineTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
-    /*public static final RegistryObject<Block> OLEANDER_LOG = registerBlock("oleander_log",
+    public static final RegistryObject<Block> OLEANDER_LOG = registerBlock("oleander_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> OLEANDER_PLANKS = registerBlock("oleander_planks",
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
@@ -143,7 +143,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> OLIVE_PLANKS = registerBlock("olive_planks",
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> OLIVE_LEAVES = registerBlock("olive_leaves",
-            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));*/
+            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
 
     public static final RegistryObject<Block> CORK_OAK_LOG = registerBlock("cork_oak_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
@@ -214,7 +214,7 @@ public class ModBlocks {
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
 
     //Sweet Chestnut, just as Liquambar, also gens in Subtropical Seasonal Forest
-    /*public static final RegistryObject<Block> SWEET_CHESTNUT_LOG = registerBlock("sweet_chestnut_log",
+    public static final RegistryObject<Block> SWEET_CHESTNUT_LOG = registerBlock("sweet_chestnut_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> SWEET_CHESTNUT_WOOD = registerBlock("sweet_chestnut_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
@@ -271,12 +271,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> STARFRUIT_PLANKS = registerBlock("starfruit_planks",
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> STARFRUIT_LEAVES = registerBlock("starfruit_leaves",
-            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));*/
+            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
 
     public static final RegistryObject<Block> TROPICAL_HIBISCUS = registerBlock("tropical_hibiscus",
             () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH)));
     public static final RegistryObject<Block> SPIDER_LILY = registerBlock("spider_lily",
-            () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH)));
+            () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH)));*/
 
     public static final RegistryObject<Block> BASIL = registerBlock("basil",
             () -> new FlowerBlock(() -> MobEffects.HERO_OF_THE_VILLAGE, 4,
@@ -296,7 +296,7 @@ public class ModBlocks {
     //Almond Tree (also Peach tree to the forest)
 
     //Badlands
-    public static final RegistryObject<Block> POPLAR_LOG = registerBlock("poplar_log",
+    /*public static final RegistryObject<Block> POPLAR_LOG = registerBlock("poplar_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> POPLAR_WOOD = registerBlock("poplar_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
@@ -307,7 +307,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> POPLAR_PLANKS = registerBlock("poplar_planks",
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> FREMONT_COTTONWOOD_LEAVES = registerBlock("fremont_cottonwood_leaves",
-            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
+            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));*/
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

@@ -1,4 +1,4 @@
-package net.caiocesarmods.caiocesarbiomes.worldgen.biome;
+/*package net.caiocesarmods.caiocesarbiomes.worldgen.biome;
 
 import com.mojang.datafixers.util.Pair;
 import net.caiocesarmods.caiocesarbiomes.worldgen.biome.ModBiomes.*;
@@ -66,4 +66,4 @@ public class ModEditedRegions extends Region {
             //builder.replaceBiome(Biomes.DESERT, HumidTemperateBeachBiome.HUMID_TEMPERATE_BEACH);
         });
     }
-}
+}*/

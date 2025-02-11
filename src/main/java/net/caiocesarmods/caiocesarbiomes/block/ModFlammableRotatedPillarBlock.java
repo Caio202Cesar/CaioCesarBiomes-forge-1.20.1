@@ -39,12 +39,12 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
             if(state.is(ModBlocks.ARAUCARIA_WOOD.get())) {
                 return ModBlocks.STRIPPED_ARAUCARIA_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
-            if(state.is(ModBlocks.NOTHOFAGUS_LOG.get())) {
+            /*if(state.is(ModBlocks.NOTHOFAGUS_LOG.get())) {
                 return ModBlocks.STRIPPED_NOTHOFAGUS_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
             if(state.is(ModBlocks.NOTHOFAGUS_WOOD.get())) {
                 return ModBlocks.STRIPPED_NOTHOFAGUS_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
-            }
+            }*/
             if(state.is(ModBlocks.FIG_LOG.get())) {
                 return ModBlocks.STRIPPED_FIG_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
@@ -56,7 +56,7 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
             }
             if(state.is(ModBlocks.JUNGLE_FIG_WOOD.get())) {
                 return ModBlocks.STRIPPED_FIG_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
-            }
+            }/*
             if(state.is(ModBlocks.ITALIAN_CYPRESS_LOG.get())) {
                 return ModBlocks.STRIPPED_ITALIAN_CYPRESS_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
@@ -68,7 +68,7 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
             }
             if(state.is(ModBlocks.STONE_PINE_WOOD.get())) {
                 return ModBlocks.STRIPPED_STONE_PINE_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
-            }
+            }*/
         }
 
         return super.getToolModifiedState(state, context, toolAction, simulate);

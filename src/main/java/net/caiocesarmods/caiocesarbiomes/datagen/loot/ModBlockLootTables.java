@@ -28,7 +28,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.MONKEY_PUZZLE_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.MONKEY_PUZZLE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
-        this.dropSelf(ModBlocks.NOTHOFAGUS_LOG.get());
+        /*this.dropSelf(ModBlocks.NOTHOFAGUS_LOG.get());
         this.dropSelf(ModBlocks.NOTHOFAGUS_WOOD.get());
         this.dropSelf(ModBlocks.STRIPPED_NOTHOFAGUS_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_NOTHOFAGUS_WOOD.get());
@@ -51,8 +51,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_STONE_PINE_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_STONE_PINE_WOOD.get());
         this.dropSelf(ModBlocks.STONE_PINE_PLANKS.get());
-        this.add(ModBlocks.WEEPING_FIG_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.STONE_PINE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.STONE_PINE_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.STONE_PINE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));*/
 
         this.dropSelf(ModBlocks.FIG_LOG.get());
         this.dropSelf(ModBlocks.JUNGLE_FIG_LOG.get());
@@ -61,6 +61,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_FIG_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_FIG_WOOD.get());
         this.dropSelf(ModBlocks.FIG_PLANKS.get());
+        this.dropSelf(ModBlocks.WEEPING_FIG_SAPLING.get());
+        this.dropSelf(ModBlocks.INDIAN_LAUREL_SAPLING.get());
         this.add(ModBlocks.WEEPING_FIG_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.WEEPING_FIG_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.INDIAN_LAUREL_LEAVES.get(), block ->

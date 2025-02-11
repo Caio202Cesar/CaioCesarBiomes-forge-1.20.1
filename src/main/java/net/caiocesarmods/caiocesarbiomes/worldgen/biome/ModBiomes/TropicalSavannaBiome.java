@@ -1,4 +1,4 @@
-package net.caiocesarmods.caiocesarbiomes.worldgen.biome.ModBiomes;
+/*package net.caiocesarmods.caiocesarbiomes.worldgen.biome.ModBiomes;
 
 import net.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.ModBiomeDefaultFeatures;
@@ -67,4 +67,4 @@ public class TropicalSavannaBiome {
                         .fogColor(0x22a1e6)
                         .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS).build()).build();
     }
-}
+}*/
