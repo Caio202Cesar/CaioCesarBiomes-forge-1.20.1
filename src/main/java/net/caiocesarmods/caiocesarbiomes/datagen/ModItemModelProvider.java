@@ -1,6 +1,7 @@
 package net.caiocesarmods.caiocesarbiomes.datagen;
 
 import net.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import net.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.caiocesarmods.caiocesarbiomes.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -33,6 +34,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.STARFRUIT_SLICE);
         simpleItem(ModItems.TAMARINDS);
 
+        simpleBlockItemBlockTexture(ModBlocks.BASIL);
+        simpleBlockItemBlockTexture(ModBlocks.PURPLE_BASIL);
+
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
@@ -45,5 +49,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(CaioCesarBiomesMod.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItemBlockTexture(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(CaioCesarBiomesMod.MOD_ID,"block/" + item.getId().getPath()));
     }
 }

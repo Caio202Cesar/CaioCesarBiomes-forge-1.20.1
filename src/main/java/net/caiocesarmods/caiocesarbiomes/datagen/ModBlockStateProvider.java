@@ -61,6 +61,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_FIG_LOG);
         blockItem(ModBlocks.STRIPPED_FIG_WOOD);
         blockWithItem(ModBlocks.FIG_PLANKS);
+
+        simpleBlockWithItem(ModBlocks.BASIL.get(), models().cross(blockTexture(ModBlocks.BASIL.get()).getPath(),
+                blockTexture(ModBlocks.BASIL.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_BASIL.get(), models().singleTexture("potted_basil",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.BASIL.get())).renderType("cutout"));
+
+        simpleBlockWithItem(ModBlocks.PURPLE_BASIL.get(), models().cross(blockTexture(ModBlocks.PURPLE_BASIL.get()).getPath(),
+                blockTexture(ModBlocks.PURPLE_BASIL.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_PURPLE_BASIL.get(), models().singleTexture("potted_purple_basil",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.PURPLE_BASIL.get())).renderType("cutout"));
     }
 
 
