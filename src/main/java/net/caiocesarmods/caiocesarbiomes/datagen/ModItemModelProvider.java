@@ -24,15 +24,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.FIG);
         simpleItem(ModItems.BLACK_CURRANT);
         simpleItem(ModItems.RED_CURRANT);
-        simpleItem(ModItems.CHERRY_PLUM);
-        simpleItem(ModItems.ELDERBERRIES);
         simpleItem(ModItems.MULBERRIES);
         simpleItem(ModItems.LOQUAT);
         simpleItem(ModItems.OLIVES);
         simpleItem(ModItems.POMEGRANATE);
         simpleItem(ModItems.STARFRUIT);
         simpleItem(ModItems.STARFRUIT_SLICE);
-        simpleItem(ModItems.TAMARINDS);
 
         simpleBlockItemBlockTexture(ModBlocks.BASIL);
         simpleBlockItemBlockTexture(ModBlocks.PURPLE_BASIL);
