@@ -63,8 +63,6 @@ public class CaioCesarBiomesMod {
             event.accept(ModItems.FIG);
             event.accept(ModItems.BLACK_CURRANT);
             event.accept(ModItems.RED_CURRANT);
-            event.accept(ModItems.ELDERBERRIES);
-
         }
 
     }

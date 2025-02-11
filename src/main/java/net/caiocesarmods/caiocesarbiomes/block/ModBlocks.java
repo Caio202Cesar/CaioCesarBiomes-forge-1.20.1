@@ -101,14 +101,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> OLEANDER_RED_LEAVES = registerBlock("oleander_red_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));*/
 
-    public static final RegistryObject<Block> FIG_LOG = registerBlock("fig_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    //public static final RegistryObject<Block> FIG_LOG = registerBlock("fig_log",() -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> JUNGLE_FIG_LOG = registerBlock("jungle_fig_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> STRIPPED_FIG_LOG = registerBlock("stripped_fig_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
-    public static final RegistryObject<Block> FIG_WOOD = registerBlock("fig_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    //public static final RegistryObject<Block> FIG_WOOD = registerBlock("fig_wood", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> JUNGLE_FIG_WOOD = registerBlock("jungle_fig_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> STRIPPED_FIG_WOOD = registerBlock("stripped_fig_wood",

@@ -25,9 +25,15 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModBlocks.ARAUCARIA_LOG.get().asItem())
                 .add(ModBlocks.STRIPPED_ARAUCARIA_LOG.get().asItem())
                 .add(ModBlocks.ARAUCARIA_WOOD.get().asItem())
-                .add(ModBlocks.STRIPPED_ARAUCARIA_WOOD.get().asItem());
+                .add(ModBlocks.STRIPPED_ARAUCARIA_WOOD.get().asItem())
+                .add(ModBlocks.JUNGLE_FIG_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_FIG_LOG.get().asItem())
+                .add(ModBlocks.JUNGLE_FIG_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_FIG_WOOD.get().asItem())
+        ;
 
         this.tag(ItemTags.PLANKS)
-                .add(ModBlocks.ARAUCARIA_PLANKS.get().asItem());
+                .add(ModBlocks.ARAUCARIA_PLANKS.get().asItem())
+                .add(ModBlocks.FIG_PLANKS.get().asItem());
     }
 }

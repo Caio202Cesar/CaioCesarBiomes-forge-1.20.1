@@ -54,9 +54,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.STONE_PINE_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.STONE_PINE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));*/
 
-        this.dropSelf(ModBlocks.FIG_LOG.get());
+        //this.dropSelf(ModBlocks.FIG_LOG.get());
         this.dropSelf(ModBlocks.JUNGLE_FIG_LOG.get());
-        this.dropSelf(ModBlocks.FIG_WOOD.get());
+        //this.dropSelf(ModBlocks.FIG_WOOD.get());
         this.dropSelf(ModBlocks.JUNGLE_FIG_WOOD.get());
         this.dropSelf(ModBlocks.STRIPPED_FIG_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_FIG_WOOD.get());

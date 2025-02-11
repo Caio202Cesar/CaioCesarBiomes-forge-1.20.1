@@ -14,8 +14,7 @@ public class ModItems {
     //Fruits and Nuts
     public static final RegistryObject<Item> AVOCADO = ITEMS.register("avocado",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> FIG = ITEMS.register("figfruit",
-            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> FIG = ITEMS.register("figfruit", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> POMEGRANATE = ITEMS.register("pomegranate",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> OLIVES = ITEMS.register("olives",
@@ -34,13 +33,6 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> STARFRUIT_SLICE = ITEMS.register("starfruit_slice",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> ELDERBERRIES = ITEMS.register("elderberries",
-            () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> TAMARINDS = ITEMS.register("tamarinds",
-            () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CHERRY_PLUM = ITEMS.register("cherry_plum",
-            () -> new Item(new Item.Properties()));
-
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
