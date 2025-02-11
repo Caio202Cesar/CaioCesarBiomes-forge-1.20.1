@@ -3,7 +3,11 @@ package net.caiocesarmods.caiocesarbiomes.datagen.loot;
 import net.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
@@ -41,6 +45,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_STONE_PINE_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_STONE_PINE_WOOD.get());
         this.dropSelf(ModBlocks.STONE_PINE_PLANKS.get());
+
+        this.dropSelf(ModBlocks.FIG_LOG.get());
+        this.dropSelf(ModBlocks.JUNGLE_FIG_LOG.get());
+        this.dropSelf(ModBlocks.FIG_WOOD.get());
+        this.dropSelf(ModBlocks.JUNGLE_FIG_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_FIG_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_FIG_WOOD.get());
+        this.dropSelf(ModBlocks.FIG_PLANKS.get());
+        this.add(ModBlocks.WEEPING_FIG_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.WEEPING_FIG_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.INDIAN_LAUREL_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.INDIAN_LAUREL_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.dropSelf(ModBlocks.BASIL.get());
         this.add(ModBlocks.POTTED_BASIL.get(), createPotFlowerItemTable(ModBlocks.BASIL.get()));
