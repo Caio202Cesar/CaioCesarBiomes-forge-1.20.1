@@ -39,10 +39,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     }
 
-    private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
-        return withExistingParent(item.getId().getPath(),
+    private void simpleItem(RegistryObject<Item> item) {
+        withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(CaioCesarBiomesMod.MOD_ID,"item/" + item.getId().getPath()));
+                new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
@@ -51,9 +51,9 @@ public class ModItemModelProvider extends ItemModelProvider {
                 new ResourceLocation(CaioCesarBiomesMod.MOD_ID,"item/" + item.getId().getPath()));
     }
 
-    private ItemModelBuilder simpleBlockItemBlockTexture(RegistryObject<Block> item) {
-        return withExistingParent(item.getId().getPath(),
+    private void simpleBlockItemBlockTexture(RegistryObject<Block> item) {
+        withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(CaioCesarBiomesMod.MOD_ID,"block/" + item.getId().getPath()));
+                new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "block/" + item.getId().getPath()));
     }
 }
