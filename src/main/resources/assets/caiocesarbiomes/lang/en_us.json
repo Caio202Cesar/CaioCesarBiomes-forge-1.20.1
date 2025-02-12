@@ -1,5 +1,23 @@
 {
   "item.caiocesarbiomes.avocado": "Avocado",
 
+  "block.caiocesarbiomes.araucaria_log": "Araucaria Log",
+  "block.caiocesarbiomes.araucaria_wood": "Araucaria Wood",
+  "block.caiocesarbiomes.stripped_araucaria_log": "Stripped Araucaria Log",
+  "block.caiocesarbiomes.stripped_araucaria_wood": "Stripped Araucaria Wood",
+  "block.caiocesarbiomes.araucaria_planks": "Araucaria Planks",
+  "block.caiocesarbiomes.monkey_puzzle_leaves": "Monkey Puzzle Leaves",
+  "block.caiocesarbiomes.monkey_puzzle_sapling": "Monkey Puzzle Sapling",
+
+  "block.caiocesarbiomes.jungle_fig_log": "Jungle Fig Log",
+  "block.caiocesarbiomes.jungle_fig_wood": "Jungle Fig Wood",
+  "block.caiocesarbiomes.stripped_fig_log": "Stripped Fig Log",
+  "block.caiocesarbiomes.stripped_fig_wood": "Stripped Fig Wood",
+  "block.caiocesarbiomes.fig_planks": "Fig Planks",
+  "block.caiocesarbiomes.weeping_fig_leaves": "Weeping Fig Leaves",
+  "block.caiocesarbiomes.weeping_fig_sapling": "Weeping Fig Sapling",
+  "block.caiocesarbiomes.indian_laurel_leaves": "Indian Laurel Leaves",
+  "block.caiocesarbiomes.indian_laurel_sapling": "Indian Laurel Sapling",
+
   "creativetab.caio_cesar_biomes_tab": "Caio Cesar's Biomes"
 }

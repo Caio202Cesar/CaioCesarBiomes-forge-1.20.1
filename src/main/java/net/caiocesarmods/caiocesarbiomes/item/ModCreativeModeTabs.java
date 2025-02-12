@@ -25,6 +25,17 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STRIPPED_ARAUCARIA_WOOD.get());
                         output.accept(ModBlocks.ARAUCARIA_PLANKS.get());
                         output.accept(ModBlocks.MONKEY_PUZZLE_LEAVES.get());
+                        output.accept(ModBlocks.MONKEY_PUZZLE_SAPLING.get());
+
+                        output.accept(ModBlocks.JUNGLE_FIG_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_FIG_LOG.get());
+                        output.accept(ModBlocks.JUNGLE_FIG_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_FIG_WOOD.get());
+                        output.accept(ModBlocks.FIG_PLANKS.get());
+                        output.accept(ModBlocks.WEEPING_FIG_LEAVES.get());
+                        output.accept(ModBlocks.WEEPING_FIG_SAPLING.get());
+                        output.accept(ModBlocks.INDIAN_LAUREL_LEAVES.get());
+                        output.accept(ModBlocks.INDIAN_LAUREL_SAPLING.get());
 
                         output.accept(ModBlocks.BASIL.get());
                         output.accept(ModBlocks.PURPLE_BASIL.get());
