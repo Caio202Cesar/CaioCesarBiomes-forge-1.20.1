@@ -8,8 +8,6 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import org.jetbrains.annotations.Nullable;
 
 public class MonkeyPuzzleTreeGrower extends AbstractTreeGrower {
-    @Nullable
-    @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomSource, boolean b) {
         if (randomSource.nextInt(10) == 0) {
             return ModTreeFeatures.MONKEY_PUZZLE_KEY;
