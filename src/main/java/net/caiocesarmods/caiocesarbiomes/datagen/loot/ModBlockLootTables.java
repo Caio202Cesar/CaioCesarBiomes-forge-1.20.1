@@ -3,11 +3,7 @@ package net.caiocesarmods.caiocesarbiomes.datagen.loot;
 import net.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
@@ -56,7 +52,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STONE_PINE_PLANKS.get());
         this.dropSelf(ModBlocks.STONE_PINE_SAPLING.get());
         this.add(ModBlocks.STONE_PINE_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.STONE_PINE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));*/
+                createLeavesDrops(block, ModBlocks.STONE_PINE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.dropSelf(ModBlocks.FIG_LOG.get());
         this.dropSelf(ModBlocks.JUNGLE_FIG_LOG.get());
