@@ -46,13 +46,13 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> NOTHOFAGUS_PLANKS = registerBlock("nothofagus_planks",
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
-    public static final RegistryObject<Block> CRIMSON_SOUTHERN_BEECH_AUTUMNAL_LEAVES = registerBlock("crimson_beech_autumnal_leaves",
+    public static final RegistryObject<Block> CRIMSON_SOUTHERN_BEECH_AUTUMNAL_LEAVES = registerBlock("crimson_southern_beech_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
-    public static final RegistryObject<Block> CRIMSON_SOUTHERN_BEECH_SAPLING = registerBlock("crimson_beech_sapling",
+    public static final RegistryObject<Block> CRIMSON_SOUTHERN_BEECH_SAPLING = registerBlock("crimson_southern_beech_sapling",
             () -> new SaplingBlock(new CrimsonAutumnalSouthernBeechTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> ORANGE_SOUTHERN_BEECH_AUTUMNAL_LEAVES = registerBlock("orange_beech_autumnal_leaves",
+    public static final RegistryObject<Block> ORANGE_SOUTHERN_BEECH_AUTUMNAL_LEAVES = registerBlock("orange_southern_beech_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
-    public static final RegistryObject<Block> ORANGE_SOUTHERN_BEECH_SAPLING = registerBlock("orange_beech_sapling",
+    public static final RegistryObject<Block> ORANGE_SOUTHERN_BEECH_SAPLING = registerBlock("orange_southern_beech_sapling",
             () -> new SaplingBlock(new OrangeAutumnalSouthernBeechTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     //public static final RegistryObject<Block> SOUTHERN_BEECH_LEAVES = registerBlock("southern_beech_leaves", () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
