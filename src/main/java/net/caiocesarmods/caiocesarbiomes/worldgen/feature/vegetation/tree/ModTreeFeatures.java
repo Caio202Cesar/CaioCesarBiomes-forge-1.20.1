@@ -41,9 +41,10 @@ public class ModTreeFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> HOLM_OAK_KEY = FeatureUtils.createKey("holm_oak");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_HOLM_OAK_KEY = FeatureUtils.createKey("fancy_holm_oak");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HOLM_OAK_SHRUB_KEY = FeatureUtils.createKey("cork_oak_shrub");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> KERMES_OAK_KEY = FeatureUtils.createKey("kermes_oak");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_KERMES_OAK_KEY = FeatureUtils.createKey("fancy_kermes_oak");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> KERMES_OAK_SHRUB_KEY = FeatureUtils.createKey("kermes_oak_shrub");
+    //public static final ResourceKey<ConfiguredFeature<?, ?>> KERMES_OAK_KEY = FeatureUtils.createKey("kermes_oak");
+    //public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_KERMES_OAK_KEY = FeatureUtils.createKey("fancy_kermes_oak");
+    //public static final ResourceKey<ConfiguredFeature<?, ?>> KERMES_OAK_SHRUB_KEY = FeatureUtils.createKey("kermes_oak_shrub");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OAK_SHRUB_KEY = FeatureUtils.createKey("oak_shrub");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FIG_KEY = FeatureUtils.createKey("fig_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PLANE_KEY = FeatureUtils.createKey("plane");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_PLANE_KEY = FeatureUtils.createKey("fancy_plane");
@@ -155,10 +156,40 @@ public class ModTreeFeatures {
                 BlockStateProvider.simple(ModBlocks.HOLM_OAK_LEAVES.get()),
                 new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 4),
                 new TwoLayersFeatureSize(0, 0, 0,OptionalInt.of(4))).build());
+        FeatureUtils.register(bootstapContext, CORK_OAK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.CORK_OAK_LOG.get()),
+                new StraightTrunkPlacer(6, 2, 0),
+                BlockStateProvider.simple(ModBlocks.CORK_OAK_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+        FeatureUtils.register(bootstapContext, FANCY_CORK_OAK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.CORK_OAK_LOG.get()),
+                new FancyTrunkPlacer(3, 11, 0),
+                BlockStateProvider.simple(ModBlocks.CORK_OAK_LEAVES.get()),
+                new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 4),
+                new TwoLayersFeatureSize(0, 0, 0,OptionalInt.of(4))).build());
 
         //Oak Shrubs
+        FeatureUtils.register(bootstapContext, HOLM_OAK_SHRUB_KEY, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.HOLM_OAK_LOG.get()),
+                new StraightTrunkPlacer(1, 0, 0),
+                BlockStateProvider.simple(ModBlocks.HOLM_OAK_LEAVES.get()),
+                new BushFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), 2),
+                new TwoLayersFeatureSize(0, 0, 0))).build());
+        FeatureUtils.register(bootstapContext, CORK_OAK_SHRUB_KEY, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.CORK_OAK_LOG.get()),
+                new StraightTrunkPlacer(1, 0, 0),
+                BlockStateProvider.simple(ModBlocks.CORK_OAK_LEAVES.get()),
+                new BushFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), 2),
+                new TwoLayersFeatureSize(0, 0, 0))).build());
+        FeatureUtils.register(bootstapContext, OAK_SHRUB_KEY, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(Blocks.OAK_LOG),
+                new StraightTrunkPlacer(1, 0, 0),
+                BlockStateProvider.simple(Blocks.OAK_LEAVES),
+                new BushFoliagePlacer(ConstantInt.of(2), ConstantInt.of(1), 2),
+                new TwoLayersFeatureSize(0, 0, 0))).build());
 
-        //Plane Tree (neo-forest feature, one fancy and other blob, just like oak)
+        //Plane Tree (neo-forest feature)
         FeatureUtils.register(bootstapContext, PLANE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.PLANE_LOG.get()),
                 new StraightTrunkPlacer(6, 2, 0),
