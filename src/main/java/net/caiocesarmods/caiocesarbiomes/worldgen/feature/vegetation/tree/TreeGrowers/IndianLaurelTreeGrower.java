@@ -9,14 +9,24 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class IndianLaurelTreeGrower extends AbstractMegaTreeGrower {
-    protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomSource, boolean b) {
-        return ModTreeFeatures.INDIAN_LAUREL_KEY;
+    /**
+     * @param pRandom
+     * @return the key of the huge variant of this tree
+     */
+    @Nullable
+    @Override
+    protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredMegaFeature(RandomSource pRandom) {
+        return ModTreeFeatures.INDIAN_LAUREL_BIG_KEY;
     }
 
     /**
-     * @return the key of the huge variant of this tree
+     * @param pRandom
+     * @param pHasFlowers
+     * @return the key of this tree
      */
-    protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredMegaFeature(RandomSource pRandom) {
-        return ModTreeFeatures.INDIAN_LAUREL_BIG_KEY;
+    @Nullable
+    @Override
+    protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource pRandom, boolean pHasFlowers) {
+        return ModTreeFeatures.INDIAN_LAUREL_KEY;
     }
 }
