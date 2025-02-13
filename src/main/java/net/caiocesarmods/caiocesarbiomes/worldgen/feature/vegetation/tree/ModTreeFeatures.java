@@ -16,10 +16,7 @@ import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSi
 import net.minecraft.world.level.levelgen.feature.foliageplacers.*;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.treedecorators.AlterGroundDecorator;
-import net.minecraft.world.level.levelgen.feature.trunkplacers.BendingTrunkPlacer;
-import net.minecraft.world.level.levelgen.feature.trunkplacers.DarkOakTrunkPlacer;
-import net.minecraft.world.level.levelgen.feature.trunkplacers.GiantTrunkPlacer;
-import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.*;
 
 import java.util.OptionalInt;
 
@@ -47,6 +44,10 @@ public class ModTreeFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> KERMES_OAK_KEY = FeatureUtils.createKey("kermes_oak");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_KERMES_OAK_KEY = FeatureUtils.createKey("fancy_kermes_oak");
     public static final ResourceKey<ConfiguredFeature<?, ?>> KERMES_OAK_SHRUB_KEY = FeatureUtils.createKey("kermes_oak_shrub");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FIG_KEY = FeatureUtils.createKey("fig_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PLANE_KEY = FeatureUtils.createKey("plane");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_PLANE_KEY = FeatureUtils.createKey("fancy_plane");
+
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> bootstapContext) {
         //Araucaria Trees
@@ -67,7 +68,7 @@ public class ModTreeFeatures {
                 .decorators(ImmutableList.of(new AlterGroundDecorator(BlockStateProvider.simple(Blocks.PODZOL)))).build());
 
         //Nothofagus Trees
-        /*FeatureUtils.register(bootstapContext, WINDSWEPT_AUTUMNAL_CRIMSON_SOUTHERN_BEECH_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+        FeatureUtils.register(bootstapContext, WINDSWEPT_AUTUMNAL_CRIMSON_SOUTHERN_BEECH_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.NOTHOFAGUS_LOG.get()),
                 new BendingTrunkPlacer(4, 2, 0, 6, UniformInt.of(1, 2)),
                 BlockStateProvider.simple(ModBlocks.CRIMSON_SOUTHERN_BEECH_AUTUMNAL_LEAVES.get()),
@@ -90,7 +91,7 @@ public class ModTreeFeatures {
                 new StraightTrunkPlacer(4, 2, 0),
                 BlockStateProvider.simple(ModBlocks.ORANGE_SOUTHERN_BEECH_AUTUMNAL_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 4),
-                new TwoLayersFeatureSize(0, 0, 0)).build());*/
+                new TwoLayersFeatureSize(0, 0, 0)).build());
 
         //Jungle Figs
         FeatureUtils.register(bootstapContext, WEEPING_FIG_BIG_KEY, Feature.TREE,
@@ -123,22 +124,52 @@ public class ModTreeFeatures {
                 new TwoLayersFeatureSize(1, 0, 1)).build());
 
 
-
         //Italian Cypress Tree
-        /*FeatureUtils.register(bootstapContext, ITALIAN_CYPRESS_KEY, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(
+        FeatureUtils.register(bootstapContext, ITALIAN_CYPRESS_KEY, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.ITALIAN_CYPRESS_LOG.get()),
                 new StraightTrunkPlacer(16, 2, 1),
                 BlockStateProvider.simple(ModBlocks.ITALIAN_CYPRESS_LEAVES.get()),
                 new SpruceFoliagePlacer(UniformInt.of(1, 0),
                         UniformInt.of(1, 1),
                         UniformInt.of(1, 0)),
-                new TwoLayersFeatureSize(2, 0, 2))).ignoreVines().build());*/
+                new TwoLayersFeatureSize(2, 0, 2))).ignoreVines().build());
+
+        //Fig Tree
+        FeatureUtils.register(bootstapContext, FIG_KEY, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.FIG_LOG.get()),
+                new StraightTrunkPlacer(4, 2, 0),
+                BlockStateProvider.simple(ModBlocks.FIG_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1))).ignoreVines().build());
 
         //Mediterranean Oaks
-
+        FeatureUtils.register(bootstapContext, HOLM_OAK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.HOLM_OAK_LOG.get()),
+                new StraightTrunkPlacer(6, 2, 0),
+                BlockStateProvider.simple(ModBlocks.HOLM_OAK_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+        FeatureUtils.register(bootstapContext, FANCY_HOLM_OAK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.HOLM_OAK_LOG.get()),
+                new FancyTrunkPlacer(3, 11, 0),
+                BlockStateProvider.simple(ModBlocks.HOLM_OAK_LEAVES.get()),
+                new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 4),
+                new TwoLayersFeatureSize(0, 0, 0,OptionalInt.of(4))).build());
 
         //Oak Shrubs
 
         //Plane Tree (neo-forest feature, one fancy and other blob, just like oak)
+        FeatureUtils.register(bootstapContext, PLANE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.PLANE_LOG.get()),
+                new StraightTrunkPlacer(6, 2, 0),
+                BlockStateProvider.simple(ModBlocks.PLANE_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+        FeatureUtils.register(bootstapContext, FANCY_PLANE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.PLANE_LOG.get()),
+                new FancyTrunkPlacer(3, 11, 0),
+                BlockStateProvider.simple(ModBlocks.PLANE_LEAVES.get()),
+                new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 4),
+                new TwoLayersFeatureSize(0, 0, 0,OptionalInt.of(4))).build());
 
     }}

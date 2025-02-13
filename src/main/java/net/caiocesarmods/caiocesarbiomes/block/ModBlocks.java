@@ -2,9 +2,7 @@ package net.caiocesarmods.caiocesarbiomes.block;
 
 import net.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import net.caiocesarmods.caiocesarbiomes.item.ModItems;
-import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.tree.TreeGrowers.IndianLaurelTreeGrower;
-import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.tree.TreeGrowers.MonkeyPuzzleTreeGrower;
-import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.tree.TreeGrowers.WeepingFigTreeGrower;
+import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.tree.TreeGrowers.*;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
@@ -38,7 +36,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> MONKEY_PUZZLE_SAPLING = registerBlock("monkey_puzzle_sapling",
             () -> new SaplingBlock(new MonkeyPuzzleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
-    /*public static final RegistryObject<Block> NOTHOFAGUS_LOG = registerBlock("nothofagus_log",
+    public static final RegistryObject<Block> NOTHOFAGUS_LOG = registerBlock("nothofagus_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> NOTHOFAGUS_WOOD = registerBlock("nothofagus_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
@@ -99,21 +97,26 @@ public class ModBlocks {
     public static final RegistryObject<Block> OLEANDER_DARK_PINK_LEAVES = registerBlock("oleander_dark_pink_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
     public static final RegistryObject<Block> OLEANDER_RED_LEAVES = registerBlock("oleander_red_leaves",
-            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));*/
+            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
-    //public static final RegistryObject<Block> FIG_LOG = registerBlock("fig_log",() -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> FIG_LOG = registerBlock("fig_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> JUNGLE_FIG_LOG = registerBlock("jungle_fig_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> STRIPPED_FIG_LOG = registerBlock("stripped_fig_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
-    //public static final RegistryObject<Block> FIG_WOOD = registerBlock("fig_wood", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> FIG_WOOD = registerBlock("fig_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> JUNGLE_FIG_WOOD = registerBlock("jungle_fig_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> STRIPPED_FIG_WOOD = registerBlock("stripped_fig_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> FIG_PLANKS = registerBlock("fig_planks",
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
-    //public static final RegistryObject<Block> FIG_LEAVES = registerBlock("fig_leaves", () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
+    public static final RegistryObject<Block> FIG_LEAVES = registerBlock("fig_leaves",
+            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
+    public static final RegistryObject<Block> FIG_SAPLING = registerBlock("fig_sapling",
+            () -> new SaplingBlock(new FigTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Block> WEEPING_FIG_LEAVES = registerBlock("weeping_fig_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> WEEPING_FIG_SAPLING = registerBlock("weeping_fig_sapling",
@@ -123,7 +126,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> INDIAN_LAUREL_SAPLING = registerBlock("indian_laurel_sapling",
             () -> new SaplingBlock(new IndianLaurelTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
-    /*public static final RegistryObject<Block> POMEGRANATE_LOG = registerBlock("pomegranate_log",
+    public static final RegistryObject<Block> POMEGRANATE_LOG = registerBlock("pomegranate_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> POMEGRANATE_PLANKS = registerBlock("pomegranate_planks",
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
@@ -271,7 +274,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> STARFRUIT_LEAVES = registerBlock("starfruit_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
 
-    public static final RegistryObject<Block> TROPICAL_HIBISCUS = registerBlock("tropical_hibiscus",
+    /*public static final RegistryObject<Block> TROPICAL_HIBISCUS = registerBlock("tropical_hibiscus",
             () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH)));
     public static final RegistryObject<Block> SPIDER_LILY = registerBlock("spider_lily",
             () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH)));*/
