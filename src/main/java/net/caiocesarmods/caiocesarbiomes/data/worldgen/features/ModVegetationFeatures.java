@@ -40,12 +40,12 @@ public class ModVegetationFeatures {
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         HolderGetter<PlacedFeature> featureHolderGetter = context.lookup(Registries.PLACED_FEATURE);
 
-        Holder<PlacedFeature> monkey_puzzle_holder = featureHolderGetter.getOrThrow(ModTreePlacements.MONKEY_PUZZLE_CHECKED);
-        Holder<PlacedFeature> young_monkey_puzzle_holder = featureHolderGetter.getOrThrow(ModTreePlacements.YOUNG_MONKEY_PUZZLE_CHECKED);
-        Holder<PlacedFeature> weeping_fig_holder = featureHolderGetter.getOrThrow(ModTreePlacements.WEEPING_FIG_CHECKED);
-        Holder<PlacedFeature> weeping_fig_big_holder = featureHolderGetter.getOrThrow(ModTreePlacements.BIG_WEEPING_FIG_CHECKED);
-        Holder<PlacedFeature> indian_laurel_holder = featureHolderGetter.getOrThrow(ModTreePlacements.INDIAN_LAUREL_CHECKED);
-        Holder<PlacedFeature> indian_laurel_big_holder = featureHolderGetter.getOrThrow(ModTreePlacements.BIG_INDIAN_LAUREL_CHECKED);
+        final Holder<PlacedFeature> monkey_puzzle_holder = featureHolderGetter.getOrThrow(ModTreePlacements.MONKEY_PUZZLE_CHECKED);
+        final Holder<PlacedFeature> young_monkey_puzzle_holder = featureHolderGetter.getOrThrow(ModTreePlacements.YOUNG_MONKEY_PUZZLE_CHECKED);
+        final Holder<PlacedFeature> weeping_fig_holder = featureHolderGetter.getOrThrow(ModTreePlacements.WEEPING_FIG_CHECKED);
+        final Holder<PlacedFeature> weeping_fig_big_holder = featureHolderGetter.getOrThrow(ModTreePlacements.BIG_WEEPING_FIG_CHECKED);
+        final Holder<PlacedFeature> indian_laurel_holder = featureHolderGetter.getOrThrow(ModTreePlacements.INDIAN_LAUREL_CHECKED);
+        final Holder<PlacedFeature> indian_laurel_big_holder = featureHolderGetter.getOrThrow(ModTreePlacements.BIG_INDIAN_LAUREL_CHECKED);
 
         //Trees
         register(context, MONKEY_PUZZLE_TREES, Feature.RANDOM_SELECTOR,
