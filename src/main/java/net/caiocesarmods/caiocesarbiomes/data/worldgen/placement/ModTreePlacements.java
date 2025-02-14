@@ -21,7 +21,6 @@ import static net.minecraft.data.worldgen.placement.PlacementUtils.register;
 public class ModTreePlacements {
     public static final ResourceKey<PlacedFeature> MONKEY_PUZZLE_CHECKED = ModPlacedFeatures.registerKey("monkey_puzzle_checked");
     public static final ResourceKey<PlacedFeature> YOUNG_MONKEY_PUZZLE_CHECKED = ModPlacedFeatures.registerKey("young_monkey_puzzle_checked");
-
     public static final ResourceKey<PlacedFeature> WEEPING_FIG_CHECKED = ModPlacedFeatures.registerKey("weeping_fig_checked");
     public static final ResourceKey<PlacedFeature> BIG_WEEPING_FIG_CHECKED = ModPlacedFeatures.registerKey("big_weeping_fig_checked");
     public static final ResourceKey<PlacedFeature> INDIAN_LAUREL_CHECKED = ModPlacedFeatures.registerKey("indian_laurel_checked");

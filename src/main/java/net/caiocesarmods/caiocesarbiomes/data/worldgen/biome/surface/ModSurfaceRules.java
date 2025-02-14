@@ -1,4 +1,4 @@
-package net.caiocesarmods.caiocesarbiomes.worldgen.biome.surface;
+package net.caiocesarmods.caiocesarbiomes.data.worldgen.biome.surface;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
