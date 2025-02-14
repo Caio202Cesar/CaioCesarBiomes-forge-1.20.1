@@ -1,11 +1,10 @@
 package net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.tree.TreeGrowers;
 
-import net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.tree.ModTreeFeatures;
+import net.caiocesarmods.caiocesarbiomes.data.worldgen.features.ModTreeFeatures;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.grower.AbstractMegaTreeGrower;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class IndianLaurelTreeGrower extends AbstractMegaTreeGrower {

@@ -1,16 +1,19 @@
-package net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation.tree;
+package net.caiocesarmods.caiocesarbiomes.data.worldgen.features;
 
 import com.google.common.collect.ImmutableList;
 import net.caiocesarmods.caiocesarbiomes.block.ModBlocks;
 import net.caiocesarmods.caiocesarbiomes.worldgen.feature.ModConfiguredFeatures;
+import net.minecraft.core.HolderGetter;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
-import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.ThreeLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
@@ -56,6 +59,7 @@ public class ModTreeFeatures {
 
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
+        HolderGetter<Block> holderGetter = context.lookup(Registries.BLOCK);
         //Araucaria Trees
         register(context, MONKEY_PUZZLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.ARAUCARIA_LOG.get()),
@@ -208,4 +212,10 @@ public class ModTreeFeatures {
                 new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 4),
                 new TwoLayersFeatureSize(0, 0, 0,OptionalInt.of(4))).build());
 
-    }}
+
+    }
+
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC config) {
+        context.register(key, new ConfiguredFeature<>(feature, config));
+    }
+}

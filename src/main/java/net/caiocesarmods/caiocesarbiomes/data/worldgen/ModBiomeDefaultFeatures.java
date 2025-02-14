@@ -1,5 +1,6 @@
-package net.caiocesarmods.caiocesarbiomes.worldgen.feature.vegetation;
+package net.caiocesarmods.caiocesarbiomes.data.worldgen;
 
+import net.caiocesarmods.caiocesarbiomes.data.worldgen.placement.ModVegetationPlacements;
 import net.minecraft.world.level.biome.BiomeGenerationSettings;
 import net.minecraft.world.level.levelgen.GenerationStep;
 
