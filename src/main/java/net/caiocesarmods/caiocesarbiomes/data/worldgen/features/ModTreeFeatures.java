@@ -56,7 +56,8 @@ public class ModTreeFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> FIG_KEY = ModConfiguredFeatures.registerKey("fig_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PLANE_KEY = ModConfiguredFeatures.registerKey("plane");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_PLANE_KEY = ModConfiguredFeatures.registerKey("fancy_plane");
-
+    public static final ResourceKey<ConfiguredFeature<?, ?>> STONE_PINE1_KEY = ModConfiguredFeatures.registerKey("stone_pine1");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> STONE_PINE2_KEY = ModConfiguredFeatures.registerKey("stone_pine2");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         HolderGetter<Block> holderGetter = context.lookup(Registries.BLOCK);
@@ -212,6 +213,19 @@ public class ModTreeFeatures {
                 new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 4),
                 new TwoLayersFeatureSize(0, 0, 0,OptionalInt.of(4))).build());
 
+        //Stone Pine
+        register(context, STONE_PINE1_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.STONE_PINE_LOG.get()),
+                new ForkingTrunkPlacer(8, 6, 0),
+                BlockStateProvider.simple(ModBlocks.STONE_PINE_LEAVES.get()),
+                new DarkOakFoliagePlacer(ConstantInt.of(1), ConstantInt.of(0)),
+                new TwoLayersFeatureSize(2, 0, 2)).build());
+        register(context, STONE_PINE2_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.STONE_PINE_LOG.get()),
+                new StraightTrunkPlacer(8, 6, 0),
+                BlockStateProvider.simple(ModBlocks.STONE_PINE_LEAVES.get()),
+                new DarkOakFoliagePlacer(ConstantInt.of(1), ConstantInt.of(0)),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
 
     }
 
