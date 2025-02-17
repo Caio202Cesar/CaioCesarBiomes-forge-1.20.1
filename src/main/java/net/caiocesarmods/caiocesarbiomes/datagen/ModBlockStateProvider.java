@@ -69,8 +69,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.WEEPING_FIG_LEAVES);
         leavesBlock(ModBlocks.INDIAN_LAUREL_LEAVES);
         saplingBlock(ModBlocks.WEEPING_FIG_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_ITALIAN_CYPRESS_SAPLING.get(), models().singleTexture("potted_italian_cypress_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.ITALIAN_CYPRESS_SAPLING.get())).renderType("cutout"));
         saplingBlock(ModBlocks.INDIAN_LAUREL_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_ITALIAN_CYPRESS_SAPLING.get(), models().singleTexture("potted_italian_cypress_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.ITALIAN_CYPRESS_SAPLING.get())).renderType("cutout"));
+
         saplingBlock(ModBlocks.FIG_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_ITALIAN_CYPRESS_SAPLING.get(), models().singleTexture("potted_italian_cypress_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.ITALIAN_CYPRESS_SAPLING.get())).renderType("cutout"));
+
 
         logBlock(((RotatedPillarBlock) ModBlocks.ITALIAN_CYPRESS_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.ITALIAN_CYPRESS_WOOD.get()), blockTexture(ModBlocks.ITALIAN_CYPRESS_LOG.get()),
@@ -81,16 +89,44 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockTexture(ModBlocks.STRIPPED_ITALIAN_CYPRESS_LOG.get()));
         leavesBlock(ModBlocks.ITALIAN_CYPRESS_LEAVES);
         saplingBlock(ModBlocks.ITALIAN_CYPRESS_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_ITALIAN_CYPRESS_SAPLING.get(), models().singleTexture("potted_italian_cypress_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.ITALIAN_CYPRESS_SAPLING.get())).renderType("cutout"));
 
         logBlock(((RotatedPillarBlock) ModBlocks.STONE_PINE_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.STONE_PINE_WOOD.get()), blockTexture(ModBlocks.STONE_PINE_LOG.get()),
                 blockTexture(ModBlocks.STONE_PINE_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_STONE_PINE_LOG.get()), blockTexture(ModBlocks.STRIPPED_STONE_PINE_LOG.get()),
-                new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "block/stripped_stone_pine_log_top"));
-        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_STONE_PINE_WOOD.get()), blockTexture(ModBlocks.STRIPPED_STONE_PINE_LOG.get()),
-                blockTexture(ModBlocks.STRIPPED_STONE_PINE_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_PINE_LOG.get()), blockTexture(ModBlocks.STRIPPED_PINE_LOG.get()),
+                new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "block/stripped_pine_log_top"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_PINE_WOOD.get()), blockTexture(ModBlocks.STRIPPED_PINE_LOG.get()),
+                blockTexture(ModBlocks.STRIPPED_PINE_LOG.get()));
         leavesBlock(ModBlocks.STONE_PINE_LEAVES);
         saplingBlock(ModBlocks.STONE_PINE_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_STONE_PINE_SAPLING.get(), models().singleTexture("potted_stone_pine_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.STONE_PINE_SAPLING.get())).renderType("cutout"));
+
+        logBlock(((RotatedPillarBlock) ModBlocks.OLEANDER_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.OLEANDER_WOOD.get()), blockTexture(ModBlocks.OLEANDER_LOG.get()),
+                blockTexture(ModBlocks.OLEANDER_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_OLEANDER_LOG.get()), blockTexture(ModBlocks.STRIPPED_OLEANDER_LOG.get()),
+                new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "block/stripped_oleander_log_top"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_OLEANDER_WOOD.get()), blockTexture(ModBlocks.STRIPPED_OLEANDER_LOG.get()),
+                blockTexture(ModBlocks.STRIPPED_OLEANDER_LOG.get()));
+        leavesBlock(ModBlocks.OLEANDER_RED_LEAVES);
+        leavesBlock(ModBlocks.OLEANDER_PINK_LEAVES);
+        leavesBlock(ModBlocks.OLEANDER_DARK_PINK_LEAVES);
+        leavesBlock(ModBlocks.OLEANDER_WHITE_LEAVES);
+        saplingBlock(ModBlocks.OLEANDER_RED_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_OLEANDER_RED_SAPLING.get(), models().singleTexture("potted_oleander_red_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.OLEANDER_RED_SAPLING.get())).renderType("cutout"));
+        saplingBlock(ModBlocks.OLEANDER_WHITE_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_OLEANDER_WHITE_SAPLING.get(), models().singleTexture("potted_oleander_white_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.OLEANDER_WHITE_SAPLING.get())).renderType("cutout"));
+        saplingBlock(ModBlocks.OLEANDER_PINK_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_OLEANDER_PINK_SAPLING.get(), models().singleTexture("potted_oleander_pink_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.OLEANDER_PINK_SAPLING.get())).renderType("cutout"));
+        saplingBlock(ModBlocks.OLEANDER_DARK_PINK_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_OLEANDER_DARK_PINK_SAPLING.get(), models().singleTexture("potted_oleander_dark_pink_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.OLEANDER_DARK_PINK_SAPLING.get())).renderType("cutout"));
 
         logBlock(((RotatedPillarBlock) ModBlocks.HOLM_OAK_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.HOLM_OAK_WOOD.get()), blockTexture(ModBlocks.HOLM_OAK_LOG.get()),
