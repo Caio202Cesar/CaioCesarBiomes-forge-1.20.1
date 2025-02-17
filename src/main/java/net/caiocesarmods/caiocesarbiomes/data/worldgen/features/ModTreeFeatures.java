@@ -49,9 +49,10 @@ public class ModTreeFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> HOLM_OAK_KEY = ModConfiguredFeatures.registerKey("holm_oak");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_HOLM_OAK_KEY = ModConfiguredFeatures.registerKey("fancy_holm_oak");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HOLM_OAK_SHRUB_KEY = ModConfiguredFeatures.registerKey("cork_oak_shrub");
-    //public static final ResourceKey<ConfiguredFeature<?, ?>> KERMES_OAK_KEY = FeatureUtils.createKey("kermes_oak");
-    //public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_KERMES_OAK_KEY = FeatureUtils.createKey("fancy_kermes_oak");
-    //public static final ResourceKey<ConfiguredFeature<?, ?>> KERMES_OAK_SHRUB_KEY = FeatureUtils.createKey("kermes_oak_shrub");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PINK_OLEANDER_KEY = ModConfiguredFeatures.registerKey("pink_oleander");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DARK_PINK_OLEANDER_KEY = ModConfiguredFeatures.registerKey("dark_pink_oleander");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WHITE_OLEANDER_KEY = ModConfiguredFeatures.registerKey("white_oleander");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> RED_OLEANDER_KEY = ModConfiguredFeatures.registerKey("red_oleander");
     public static final ResourceKey<ConfiguredFeature<?, ?>> OAK_SHRUB_KEY = ModConfiguredFeatures.registerKey("oak_shrub");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FIG_KEY = ModConfiguredFeatures.registerKey("fig_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PLANE_KEY = ModConfiguredFeatures.registerKey("plane");
@@ -134,7 +135,6 @@ public class ModTreeFeatures {
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
 
-
         //Italian Cypress Tree
         register(context, ITALIAN_CYPRESS_KEY, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.ITALIAN_CYPRESS_LOG.get()),
@@ -144,6 +144,32 @@ public class ModTreeFeatures {
                         UniformInt.of(1, 1),
                         UniformInt.of(1, 0)),
                 new TwoLayersFeatureSize(2, 0, 2))).ignoreVines().build());
+
+        //Oleander Shrubs
+        register(context, PINK_OLEANDER_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.OLEANDER_LOG.get()),
+                new StraightTrunkPlacer(2, 1, 0),
+                BlockStateProvider.simple(ModBlocks.OLEANDER_PINK_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+        register(context, DARK_PINK_OLEANDER_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.OLEANDER_LOG.get()),
+                new StraightTrunkPlacer(2, 1, 0),
+                BlockStateProvider.simple(ModBlocks.OLEANDER_DARK_PINK_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+        register(context, WHITE_OLEANDER_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.OLEANDER_LOG.get()),
+                new StraightTrunkPlacer(2, 1, 0),
+                BlockStateProvider.simple(ModBlocks.OLEANDER_WHITE_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+        register(context, RED_OLEANDER_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.OLEANDER_LOG.get()),
+                new StraightTrunkPlacer(2, 1, 0),
+                BlockStateProvider.simple(ModBlocks.OLEANDER_RED_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
 
         //Fig Tree
         register(context, FIG_KEY, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(
