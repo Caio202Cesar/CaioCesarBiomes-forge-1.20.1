@@ -157,21 +157,41 @@ public class ModBlocks {
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
     public static final RegistryObject<Block> FIG_SAPLING = registerBlock("fig_sapling",
             () -> new SaplingBlock(new FigTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_FIG_SAPLING = registerBlock("potted_fig_sapling",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.FIG_SAPLING,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
     public static final RegistryObject<Block> WEEPING_FIG_LEAVES = registerBlock("weeping_fig_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> WEEPING_FIG_SAPLING = registerBlock("weeping_fig_sapling",
             () -> new SaplingBlock(new WeepingFigTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_WEEPING_FIG_SAPLING = registerBlock("potted_weeping_fig_sapling",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.WEEPING_FIG_SAPLING,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
     public static final RegistryObject<Block> INDIAN_LAUREL_LEAVES = registerBlock("indian_laurel_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> INDIAN_LAUREL_SAPLING = registerBlock("indian_laurel_sapling",
             () -> new SaplingBlock(new IndianLaurelTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_INDIAN_LAUREL_SAPLING = registerBlock("potted_indian_laurel_sapling",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.INDIAN_LAUREL_SAPLING,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
 
     public static final RegistryObject<Block> POMEGRANATE_LOG = registerBlock("pomegranate_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> POMEGRANATE_WOOD = registerBlock("pomegranate_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_POMEGRANATE_LOG = registerBlock("stripped_pomegranate_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_POMEGRANATE_WOOD = registerBlock("stripped_pomegranate_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> POMEGRANATE_PLANKS = registerBlock("pomegranate_planks",
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> POMEGRANATE_LEAVES = registerBlock("pomegranate_leaves",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
+    public static final RegistryObject<Block> POMEGRANATE_SAPLING = registerBlock("pomegranate_sapling",
+            () -> new SaplingBlock(new IndianLaurelTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_POMEGRANATE_SAPLING = registerBlock("potted_pomegranate_sapling",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.POMEGRANATE_SAPLING,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
 
     public static final RegistryObject<Block> OLIVE_LOG = registerBlock("olive_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
@@ -185,6 +205,11 @@ public class ModBlocks {
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> OLIVE_LEAVES = registerBlock("olive_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
+    public static final RegistryObject<Block> OLIVE_SAPLING = registerBlock("olive_sapling",
+            () -> new SaplingBlock(new OliveTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_OLIVE_SAPLING = registerBlock("potted_olive_sapling",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.OLIVE_SAPLING,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
 
     public static final RegistryObject<Block> CORK_OAK_LOG = registerBlock("cork_oak_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
@@ -198,6 +223,11 @@ public class ModBlocks {
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> CORK_OAK_LEAVES = registerBlock("cork_oak_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> CORK_OAK_SAPLING = registerBlock("cork_oak_sapling",
+            () -> new SaplingBlock(new CorkOakTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_CORK_OAK_SAPLING = registerBlock("potted_cork_oak_sapling",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CORK_OAK_SAPLING,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
 
     public static final RegistryObject<Block> HOLM_OAK_LOG = registerBlock("holm_oak_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
@@ -211,6 +241,11 @@ public class ModBlocks {
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> HOLM_OAK_LEAVES = registerBlock("holm_oak_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> HOLM_OAK_SAPLING = registerBlock("holm_oak_sapling",
+            () -> new SaplingBlock(new HolmOakTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_HOLM_OAK_SAPLING = registerBlock("potted_holm_oak_sapling",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.HOLM_OAK_SAPLING,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
 
     /*public static final RegistryObject<Block> KERMES_OAK_LOG = registerBlock("kermes_oak_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
@@ -240,6 +275,9 @@ public class ModBlocks {
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> PLANE_SAPLING = registerBlock("plane_sapling",
             () -> new SaplingBlock(new PlaneTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_PLANE_SAPLING = registerBlock("potted_plane_sapling",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.PLANE_SAPLING,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
 
     public static final RegistryObject<Block> CRABAPPLE_LOG = registerBlock("crabapple_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
@@ -257,8 +295,14 @@ public class ModBlocks {
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
     public static final RegistryObject<Block> CRABAPPLE_PINK_SAPLING = registerBlock("crabapple_pink_sapling",
             () -> new SaplingBlock(new PinkCrabappleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_CRABAPPLE_PINK_SAPLING = registerBlock("potted_crabapple_pink_sapling",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CRABAPPLE_PINK_SAPLING,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
     public static final RegistryObject<Block> CRABAPPLE_WHITE_SAPLING = registerBlock("crabapple_white_sapling",
             () -> new SaplingBlock(new WhiteCrabappleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_CRABAPPLE_WHITE_SAPLING = registerBlock("potted_crabapple_white_sapling",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CRABAPPLE_WHITE_SAPLING,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
 
     //Sweet Chestnut, just as Liquambar, also gens in Subtropical Seasonal Forest
     /*public static final RegistryObject<Block> SWEET_CHESTNUT_LOG = registerBlock("sweet_chestnut_log",
