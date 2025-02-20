@@ -172,9 +172,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STARFRUIT_PLANKS.get());
         this.dropSelf(ModBlocks.STARFRUIT_SAPLING.get());
 
-        this.dropSelf(ModBlocks.BLACK_POPLAR_SAPLING.get());
-        this.add(ModBlocks.BLACK_POPLAR_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.BLACK_POPLAR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(ModBlocks.RED_KAPOK_SAPLING.get());
+        this.add(ModBlocks.RED_KAPOK_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.RED_KAPOK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.dropSelf(ModBlocks.POPLAR_LOG.get());
         this.dropSelf(ModBlocks.POPLAR_WOOD.get());
@@ -184,6 +184,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.BLACK_POPLAR_SAPLING.get());
         this.add(ModBlocks.BLACK_POPLAR_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.BLACK_POPLAR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(ModBlocks.FREMONT_COTTONWOOD_SAPLING.get());
+        this.add(ModBlocks.FREMONT_COTTONWOOD_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.FREMONT_COTTONWOOD_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.dropSelf(ModBlocks.BASIL.get());
         this.add(ModBlocks.POTTED_BASIL.get(), createPotFlowerItemTable(ModBlocks.BASIL.get()));

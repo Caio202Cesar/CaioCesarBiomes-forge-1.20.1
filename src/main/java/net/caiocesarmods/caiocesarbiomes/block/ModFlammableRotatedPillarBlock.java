@@ -81,6 +81,78 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
             if(state.is(ModBlocks.STONE_PINE_WOOD.get())) {
                 return ModBlocks.STRIPPED_PINE_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
+            if(state.is(ModBlocks.OLEANDER_LOG.get())) {
+                return ModBlocks.STRIPPED_OLEANDER_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.OLEANDER_WOOD.get())) {
+                return ModBlocks.STRIPPED_OLEANDER_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.POMEGRANATE_LOG.get())) {
+                return ModBlocks.STRIPPED_POMEGRANATE_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.POMEGRANATE_WOOD.get())) {
+                return ModBlocks.STRIPPED_POMEGRANATE_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.OLIVE_LOG.get())) {
+                return ModBlocks.STRIPPED_OLIVE_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.OLIVE_WOOD.get())) {
+                return ModBlocks.STRIPPED_OLIVE_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.CORK_OAK_LOG.get())) {
+                return ModBlocks.STRIPPED_CORK_OAK_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.CORK_OAK_WOOD.get())) {
+                return ModBlocks.STRIPPED_CORK_OAK_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.HOLM_OAK_LOG.get())) {
+                return ModBlocks.STRIPPED_HOLM_OAK_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.HOLM_OAK_WOOD.get())) {
+                return ModBlocks.STRIPPED_HOLM_OAK_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.STRAWBERRY_TREE_LOG.get())) {
+                return ModBlocks.STRIPPED_STRAWBERRY_TREE_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.STRAWBERRY_TREE_WOOD.get())) {
+                return ModBlocks.STRIPPED_STRAWBERRY_TREE_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.PLANE_LOG.get())) {
+                return ModBlocks.STRIPPED_PLANE_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.PLANE_WOOD.get())) {
+                return ModBlocks.STRIPPED_PLANE_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.CRABAPPLE_LOG.get())) {
+                return ModBlocks.STRIPPED_CRABAPPLE_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.CRABAPPLE_WOOD.get())) {
+                return ModBlocks.STRIPPED_CRABAPPLE_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.AVOCADO_LOG.get())) {
+                return ModBlocks.STRIPPED_AVOCADO_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.AVOCADO_WOOD.get())) {
+                return ModBlocks.STRIPPED_AVOCADO_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.CITRUS_LOG.get())) {
+                return ModBlocks.STRIPPED_CITRUS_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.CITRUS_WOOD.get())) {
+                return ModBlocks.STRIPPED_CITRUS_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.STARFRUIT_LOG.get())) {
+                return ModBlocks.STRIPPED_STARFRUIT_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.STARFRUIT_WOOD.get())) {
+                return ModBlocks.STRIPPED_STARFRUIT_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.POPLAR_LOG.get())) {
+                return ModBlocks.STRIPPED_POPLAR_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.POPLAR_WOOD.get())) {
+                return ModBlocks.STRIPPED_POPLAR_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
         }
 
         return super.getToolModifiedState(state, context, toolAction, simulate);

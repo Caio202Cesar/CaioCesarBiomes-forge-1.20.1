@@ -74,8 +74,8 @@ public class ModTreeFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> STARFRUIT_KEY = ModConfiguredFeatures.registerKey("starfruit_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> RED_KAPOK_KEY = ModConfiguredFeatures.registerKey("red_kapok");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FREMONT_COTTONWOOD_KEY = ModConfiguredFeatures.registerKey("fremont_cottonwood");
-
-
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_BLACK_POPLAR_KEY = ModConfiguredFeatures.registerKey("fancy_black_poplar");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LOMBARDY_POPLAR_KEY = ModConfiguredFeatures.registerKey("lombardy_poplar");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         HolderGetter<Block> holderGetter = context.lookup(Registries.BLOCK);
@@ -380,6 +380,21 @@ public class ModTreeFeatures {
                 new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 4),
                 new TwoLayersFeatureSize(0, 0, 0,OptionalInt.of(4))).build());
 
+        //Black Poplar
+        register(context, FANCY_BLACK_POPLAR_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.POPLAR_LOG.get()),
+                new FancyTrunkPlacer(3, 11, 0),
+                BlockStateProvider.simple(ModBlocks.BLACK_POPLAR_LEAVES.get()),
+                new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 4),
+                new TwoLayersFeatureSize(0, 0, 0,OptionalInt.of(4))).build());
+        register(context, LOMBARDY_POPLAR_KEY, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.POPLAR_LOG.get()),
+                new StraightTrunkPlacer(12, 2, 1),
+                BlockStateProvider.simple(ModBlocks.BLACK_POPLAR_LEAVES.get()),
+                new SpruceFoliagePlacer(UniformInt.of(1, 0),
+                        UniformInt.of(1, 1),
+                        UniformInt.of(1, 0)),
+                new TwoLayersFeatureSize(2, 0, 2))).ignoreVines().build());
     }
 
     private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC config) {
