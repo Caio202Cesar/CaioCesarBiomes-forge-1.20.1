@@ -37,6 +37,20 @@ public class ModItemModelProvider extends ItemModelProvider {
         saplingItem(ModBlocks.MONKEY_PUZZLE_SAPLING);
         saplingItem(ModBlocks.INDIAN_LAUREL_SAPLING);
         saplingItem(ModBlocks.WEEPING_FIG_SAPLING);
+        saplingItem(ModBlocks.CRIMSON_SOUTHERN_BEECH_SAPLING);
+        saplingItem(ModBlocks.ORANGE_SOUTHERN_BEECH_SAPLING);
+        saplingItem(ModBlocks.FIG_SAPLING);
+        saplingItem(ModBlocks.ITALIAN_CYPRESS_SAPLING);
+        saplingItem(ModBlocks.STONE_PINE_SAPLING);
+        saplingItem(ModBlocks.OLEANDER_PINK_SAPLING);
+        saplingItem(ModBlocks.OLEANDER_DARK_PINK_SAPLING);
+        saplingItem(ModBlocks.OLEANDER_WHITE_SAPLING);
+        saplingItem(ModBlocks.OLEANDER_RED_SAPLING);
+        saplingItem(ModBlocks.POMEGRANATE_SAPLING);
+        saplingItem(ModBlocks.OLIVE_SAPLING);
+        saplingItem(ModBlocks.HOLM_OAK_SAPLING);
+        saplingItem(ModBlocks.CORK_OAK_SAPLING);
+        saplingItem(ModBlocks.PLANE_SAPLING);
 
     }
 

@@ -69,6 +69,85 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.INDIAN_LAUREL_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.INDIAN_LAUREL_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
+        this.dropSelf(ModBlocks.OLEANDER_LOG.get());
+        this.dropSelf(ModBlocks.OLEANDER_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_OLEANDER_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_OLEANDER_WOOD.get());
+        this.dropSelf(ModBlocks.OLEANDER_PLANKS.get());
+        this.dropSelf(ModBlocks.OLEANDER_PINK_SAPLING.get());
+        this.add(ModBlocks.OLEANDER_PINK_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.OLEANDER_PINK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(ModBlocks.OLEANDER_DARK_PINK_SAPLING.get());
+        this.add(ModBlocks.OLEANDER_DARK_PINK_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.OLEANDER_DARK_PINK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(ModBlocks.OLEANDER_WHITE_SAPLING.get());
+        this.add(ModBlocks.OLEANDER_WHITE_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.OLEANDER_WHITE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(ModBlocks.OLEANDER_RED_SAPLING.get());
+        this.add(ModBlocks.OLEANDER_RED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.OLEANDER_RED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.dropSelf(ModBlocks.POMEGRANATE_LOG.get());
+        this.dropSelf(ModBlocks.POMEGRANATE_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_POMEGRANATE_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_POMEGRANATE_WOOD.get());
+        this.dropSelf(ModBlocks.POMEGRANATE_PLANKS.get());
+        this.dropSelf(ModBlocks.POMEGRANATE_SAPLING.get());
+
+        this.dropSelf(ModBlocks.OLIVE_LOG.get());
+        this.dropSelf(ModBlocks.OLIVE_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_OLIVE_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_OLIVE_WOOD.get());
+        this.dropSelf(ModBlocks.OLIVE_PLANKS.get());
+        this.dropSelf(ModBlocks.OLIVE_SAPLING.get());
+
+        this.dropSelf(ModBlocks.HOLM_OAK_LOG.get());
+        this.dropSelf(ModBlocks.HOLM_OAK_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_HOLM_OAK_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_HOLM_OAK_WOOD.get());
+        this.dropSelf(ModBlocks.HOLM_OAK_PLANKS.get());
+        this.dropSelf(ModBlocks.HOLM_OAK_SAPLING.get());
+        this.add(ModBlocks.HOLM_OAK_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.HOLM_OAK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.dropSelf(ModBlocks.CORK_OAK_LOG.get());
+        this.dropSelf(ModBlocks.CORK_OAK_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_CORK_OAK_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_CORK_OAK_WOOD.get());
+        this.dropSelf(ModBlocks.CORK_OAK_PLANKS.get());
+        this.dropSelf(ModBlocks.CORK_OAK_SAPLING.get());
+        this.add(ModBlocks.CORK_OAK_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.CORK_OAK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.dropSelf(ModBlocks.PLANE_LOG.get());
+        this.dropSelf(ModBlocks.PLANE_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_PLANE_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_PLANE_WOOD.get());
+        this.dropSelf(ModBlocks.PLANE_PLANKS.get());
+        this.dropSelf(ModBlocks.PLANE_SAPLING.get());
+        this.add(ModBlocks.PLANE_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.PLANE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.dropSelf(ModBlocks.CRABAPPLE_LOG.get());
+        this.dropSelf(ModBlocks.CRABAPPLE_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_CRABAPPLE_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_CRABAPPLE_WOOD.get());
+        this.dropSelf(ModBlocks.CRABAPPLE_PLANKS.get());
+        this.dropSelf(ModBlocks.CRABAPPLE_PINK_SAPLING.get());
+        this.add(ModBlocks.CRABAPPLE_PINK_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.CRABAPPLE_PINK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(ModBlocks.CRABAPPLE_WHITE_SAPLING.get());
+        this.add(ModBlocks.CRABAPPLE_WHITE_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.CRABAPPLE_WHITE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(ModBlocks.CRABAPPLE_WHITE_SAPLING.get());
+
+        this.dropSelf(ModBlocks.AVOCADO_LOG.get());
+        this.dropSelf(ModBlocks.AVOCADO_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_AVOCADO_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_AVOCADO_WOOD.get());
+        this.dropSelf(ModBlocks.AVOCADO_PLANKS.get());
+        this.dropSelf(ModBlocks.AVOCADO_SAPLING.get());
+
         this.dropSelf(ModBlocks.BASIL.get());
         this.add(ModBlocks.POTTED_BASIL.get(), createPotFlowerItemTable(ModBlocks.BASIL.get()));
         this.dropSelf(ModBlocks.PURPLE_BASIL.get());

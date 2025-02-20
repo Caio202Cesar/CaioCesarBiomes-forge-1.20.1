@@ -59,6 +59,12 @@ public class ModTreeFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> FANCY_PLANE_KEY = ModConfiguredFeatures.registerKey("fancy_plane");
     public static final ResourceKey<ConfiguredFeature<?, ?>> STONE_PINE1_KEY = ModConfiguredFeatures.registerKey("stone_pine1");
     public static final ResourceKey<ConfiguredFeature<?, ?>> STONE_PINE2_KEY = ModConfiguredFeatures.registerKey("stone_pine2");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> POMEGRANATE_KEY = ModConfiguredFeatures.registerKey("pomegranate_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OLIVE_KEY = ModConfiguredFeatures.registerKey("olive_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BIG_OLIVE_KEY = ModConfiguredFeatures.registerKey("big_olive");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PINK_CRABAPPLE_KEY = ModConfiguredFeatures.registerKey("pink_crabapple");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WHITE_CRABAPPLE_KEY = ModConfiguredFeatures.registerKey("white_crabapple");
+
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         HolderGetter<Block> holderGetter = context.lookup(Registries.BLOCK);
@@ -252,6 +258,45 @@ public class ModTreeFeatures {
                 BlockStateProvider.simple(ModBlocks.STONE_PINE_LEAVES.get()),
                 new DarkOakFoliagePlacer(ConstantInt.of(1), ConstantInt.of(0)),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        //Pomegranate
+        register(context, POMEGRANATE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.POMEGRANATE_LOG.get()),
+                new StraightTrunkPlacer(4, 2, 0),
+                BlockStateProvider.simple(ModBlocks.POMEGRANATE_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        //Olive
+        register(context, BIG_OLIVE_KEY, Feature.TREE,
+                new TreeConfiguration.TreeConfigurationBuilder(
+                        BlockStateProvider.simple(ModBlocks.OLIVE_LOG.get()),
+                        new DarkOakTrunkPlacer(6, 2, 1),
+                        BlockStateProvider.simple(ModBlocks.OLIVE_LEAVES.get()),
+                        new DarkOakFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0)),
+                        new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty())
+                ).ignoreVines().build());
+        register(context, OLIVE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.OLIVE_LOG.get()),
+                new StraightTrunkPlacer(4, 2, 0),
+                BlockStateProvider.simple(ModBlocks.OLIVE_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        //Crabapple
+        register(context, PINK_CRABAPPLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.CRABAPPLE_LOG.get()),
+                new StraightTrunkPlacer(4, 2, 0),
+                BlockStateProvider.simple(ModBlocks.CRABAPPLE_PINK_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+        register(context, WHITE_CRABAPPLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.CRABAPPLE_LOG.get()),
+                new StraightTrunkPlacer(4, 2, 0),
+                BlockStateProvider.simple(ModBlocks.CRABAPPLE_WHITE_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
 
     }
 

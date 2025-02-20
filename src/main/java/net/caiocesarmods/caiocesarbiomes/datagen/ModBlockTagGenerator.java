@@ -41,6 +41,51 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.STRIPPED_ITALIAN_CYPRESS_LOG.get())
                 .add(ModBlocks.ITALIAN_CYPRESS_WOOD.get())
                 .add(ModBlocks.STRIPPED_ITALIAN_CYPRESS_WOOD.get())
+
+                .add(ModBlocks.STONE_PINE_LOG.get())
+                .add(ModBlocks.STRIPPED_PINE_LOG.get())
+                .add(ModBlocks.STONE_PINE_WOOD.get())
+                .add(ModBlocks.STRIPPED_PINE_WOOD.get())
+
+                .add(ModBlocks.OLEANDER_LOG.get())
+                .add(ModBlocks.STRIPPED_OLEANDER_LOG.get())
+                .add(ModBlocks.OLEANDER_WOOD.get())
+                .add(ModBlocks.STRIPPED_OLEANDER_WOOD.get())
+
+                .add(ModBlocks.POMEGRANATE_LOG.get())
+                .add(ModBlocks.STRIPPED_POMEGRANATE_LOG.get())
+                .add(ModBlocks.POMEGRANATE_WOOD.get())
+                .add(ModBlocks.STRIPPED_POMEGRANATE_WOOD.get())
+
+                .add(ModBlocks.OLIVE_LOG.get())
+                .add(ModBlocks.STRIPPED_OLIVE_LOG.get())
+                .add(ModBlocks.OLIVE_WOOD.get())
+                .add(ModBlocks.STRIPPED_OLIVE_WOOD.get())
+
+                .add(ModBlocks.CORK_OAK_LOG.get())
+                .add(ModBlocks.STRIPPED_CORK_OAK_LOG.get())
+                .add(ModBlocks.CORK_OAK_WOOD.get())
+                .add(ModBlocks.STRIPPED_CORK_OAK_WOOD.get())
+
+                .add(ModBlocks.HOLM_OAK_LOG.get())
+                .add(ModBlocks.STRIPPED_HOLM_OAK_LOG.get())
+                .add(ModBlocks.HOLM_OAK_WOOD.get())
+                .add(ModBlocks.STRIPPED_HOLM_OAK_WOOD.get())
+
+                .add(ModBlocks.PLANE_LOG.get())
+                .add(ModBlocks.STRIPPED_PLANE_LOG.get())
+                .add(ModBlocks.PLANE_WOOD.get())
+                .add(ModBlocks.STRIPPED_PLANE_WOOD.get())
+
+                .add(ModBlocks.CRABAPPLE_LOG.get())
+                .add(ModBlocks.STRIPPED_CRABAPPLE_LOG.get())
+                .add(ModBlocks.CRABAPPLE_WOOD.get())
+                .add(ModBlocks.STRIPPED_CRABAPPLE_WOOD.get())
+
+                .add(ModBlocks.AVOCADO_LOG.get())
+                .add(ModBlocks.STRIPPED_AVOCADO_LOG.get())
+                .add(ModBlocks.AVOCADO_WOOD.get())
+                .add(ModBlocks.STRIPPED_AVOCADO_WOOD.get())
         ;
 
         this.tag(BlockTags.PLANKS)
@@ -48,6 +93,15 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.NOTHOFAGUS_PLANKS.get())
                 .add(ModBlocks.FIG_PLANKS.get())
                 .add(ModBlocks.ITALIAN_CYPRESS_PLANKS.get())
+                .add(ModBlocks.PINE_PLANKS.get())
+                .add(ModBlocks.OLEANDER_PLANKS.get())
+                .add(ModBlocks.POMEGRANATE_PLANKS.get())
+                .add(ModBlocks.OLIVE_PLANKS.get())
+                .add(ModBlocks.CORK_OAK_PLANKS.get())
+                .add(ModBlocks.HOLM_OAK_PLANKS.get())
+                .add(ModBlocks.PLANE_PLANKS.get())
+                .add(ModBlocks.CRABAPPLE_PLANKS.get())
+                .add(ModBlocks.AVOCADO_LEAVES.get())
         ;
 
     }

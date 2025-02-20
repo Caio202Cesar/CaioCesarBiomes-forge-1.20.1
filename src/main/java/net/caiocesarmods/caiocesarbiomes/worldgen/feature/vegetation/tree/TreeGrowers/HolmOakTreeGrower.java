@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.grower.AbstractTreeGrower;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import org.jetbrains.annotations.Nullable;
 
-public class MonkeyPuzzleTreeGrower extends AbstractTreeGrower {
+public class HolmOakTreeGrower extends AbstractTreeGrower {
     /**
      * @param pRandom
      * @param pHasFlowers
@@ -16,6 +16,10 @@ public class MonkeyPuzzleTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource pRandom, boolean pHasFlowers) {
-            return ModTreeFeatures.YOUNG_MONKEY_PUZZLE_KEY;
+        if (pRandom.nextInt(10) == 0) {
+            return ModTreeFeatures.FANCY_HOLM_OAK_KEY;
+        } else {
+            return ModTreeFeatures.HOLM_OAK_KEY;
         }
+    }
 }
