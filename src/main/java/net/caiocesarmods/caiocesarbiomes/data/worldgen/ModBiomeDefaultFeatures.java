@@ -8,6 +8,9 @@ public class ModBiomeDefaultFeatures {
     public static void addMonkeyPuzzleTrees(BiomeGenerationSettings.Builder pBuilder) {
         pBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModVegetationPlacements.TREES_MONKEY_PUZZLE);
     }
+    public static void addAutumnalSouthernBeeches(BiomeGenerationSettings.Builder pBuilder) {
+        pBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModVegetationPlacements.AUTUMNAL_SOUTHERN_BEECHES);
+    }
     public static void addJungleFigTrees(BiomeGenerationSettings.Builder pBuilder) {
         pBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModVegetationPlacements.TREES_JUNGLE_FIG);
     }

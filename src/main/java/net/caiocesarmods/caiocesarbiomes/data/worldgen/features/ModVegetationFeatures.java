@@ -35,6 +35,7 @@ public class ModVegetationFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> JUNGLE_FIG_TREES = ModConfiguredFeatures.registerKey("jungle_fig_trees");
     public static final ResourceKey<ConfiguredFeature<?, ?>> OLEANDER_SHRUBS = ModConfiguredFeatures.registerKey("oleander_shrubs");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MEDITERRANEAN_CONIFERS = ModConfiguredFeatures.registerKey("mediterranean_conifers");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AUTUMNAL_SOUTHERN_BEECHES = ModConfiguredFeatures.registerKey("autumnal_southern_beeches");
 
     //Plants
     public static final ResourceKey<ConfiguredFeature<?, ?>> PATCH_TROPICAL_PLANTS = ModConfiguredFeatures.registerKey("patch_tropical_plants");
@@ -45,6 +46,12 @@ public class ModVegetationFeatures {
 
         final Holder<PlacedFeature> monkey_puzzle_holder = featureHolderGetter.getOrThrow(ModTreePlacements.MONKEY_PUZZLE_CHECKED);
         final Holder<PlacedFeature> young_monkey_puzzle_holder = featureHolderGetter.getOrThrow(ModTreePlacements.YOUNG_MONKEY_PUZZLE_CHECKED);
+
+        final Holder<PlacedFeature> crimson_beech_holder = featureHolderGetter.getOrThrow(ModTreePlacements.CRIMSON_SOUTHERN_BEECH_CHECKED);
+        final Holder<PlacedFeature> orange_beech_holder = featureHolderGetter.getOrThrow(ModTreePlacements.WINDSWEPT_CRIMSON_SOUTHERN_BEECH_CHECKED);
+        final Holder<PlacedFeature> windswept_crimson_beech_holder = featureHolderGetter.getOrThrow(ModTreePlacements.ORANGE_SOUTHERN_BEECH_CHECKED);
+        final Holder<PlacedFeature> windswept_orange_beech_holder = featureHolderGetter.getOrThrow(ModTreePlacements.WINDSWEPT_ORANGE_SOUTHERN_BEECH_CHECKED);
+
         final Holder<PlacedFeature> weeping_fig_holder = featureHolderGetter.getOrThrow(ModTreePlacements.WEEPING_FIG_CHECKED);
         final Holder<PlacedFeature> weeping_fig_big_holder = featureHolderGetter.getOrThrow(ModTreePlacements.BIG_WEEPING_FIG_CHECKED);
         final Holder<PlacedFeature> indian_laurel_holder = featureHolderGetter.getOrThrow(ModTreePlacements.INDIAN_LAUREL_CHECKED);
@@ -73,6 +80,10 @@ public class ModVegetationFeatures {
         register(context, MEDITERRANEAN_CONIFERS, Feature.RANDOM_SELECTOR,
                 new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(stonepine2_holder, 0.1F),
                         new WeightedPlacedFeature(italian_cypress_holder, 0.5F)), stonepine1_holder));
+        register(context, AUTUMNAL_SOUTHERN_BEECHES, Feature.RANDOM_SELECTOR,
+                new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(windswept_crimson_beech_holder, 0.02F),
+                        new WeightedPlacedFeature(windswept_orange_beech_holder, 0.03F),
+                        new WeightedPlacedFeature(crimson_beech_holder, 0.5F)), orange_beech_holder));
 
         //Plants
         register(context, PATCH_TROPICAL_PLANTS, Feature.RANDOM_PATCH, grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
