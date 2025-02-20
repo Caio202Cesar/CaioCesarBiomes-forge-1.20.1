@@ -35,10 +35,12 @@ public class ModVegetationPlacements {
 
         final Holder<ConfiguredFeature<?, ?>> tropical_plants_holder = featureHolderGetter.getOrThrow(ModVegetationFeatures.PATCH_TROPICAL_PLANTS);
 
+        //Trees
         register(context, TREES_MONKEY_PUZZLE, monkey_puzzle_trees_holder, treePlacement(PlacementUtils.countExtra(5, 0.1F, 1),
                 ModBlocks.MONKEY_PUZZLE_SAPLING.get()));
         register(context, TREES_JUNGLE_FIG, jungle_figs_holder, treePlacement(PlacementUtils.countExtra(2, 0.1F, 1)));
 
+        //Plants
         register(context, TROPICAL_PLANTS, tropical_plants_holder, CountPlacement.of(3), RarityFilter.onAverageOnceEvery(2),
                 InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
     }

@@ -33,6 +33,8 @@ public class ModVegetationFeatures {
     //Trees
     public static final ResourceKey<ConfiguredFeature<?, ?>> MONKEY_PUZZLE_TREES = ModConfiguredFeatures.registerKey("monkey_puzzle_trees");
     public static final ResourceKey<ConfiguredFeature<?, ?>> JUNGLE_FIG_TREES = ModConfiguredFeatures.registerKey("jungle_fig_trees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OLEANDER_SHRUBS = ModConfiguredFeatures.registerKey("oleander_shrubs");
+
     //Plants
     public static final ResourceKey<ConfiguredFeature<?, ?>> PATCH_TROPICAL_PLANTS = ModConfiguredFeatures.registerKey("patch_tropical_plants");
 
@@ -47,10 +49,20 @@ public class ModVegetationFeatures {
         final Holder<PlacedFeature> indian_laurel_holder = featureHolderGetter.getOrThrow(ModTreePlacements.INDIAN_LAUREL_CHECKED);
         final Holder<PlacedFeature> indian_laurel_big_holder = featureHolderGetter.getOrThrow(ModTreePlacements.BIG_INDIAN_LAUREL_CHECKED);
 
+        final Holder<PlacedFeature> pink_oleander_holder = featureHolderGetter.getOrThrow(ModTreePlacements.);
+        final Holder<PlacedFeature> dark_pink_oleander_holder = featureHolderGetter.getOrThrow(ModTreePlacements.);
+        final Holder<PlacedFeature> red_oleander_holder = featureHolderGetter.getOrThrow(ModTreePlacements.);
+        final Holder<PlacedFeature> white_oleander_holder = featureHolderGetter.getOrThrow(ModTreePlacements.);
+
         //Trees
         register(context, MONKEY_PUZZLE_TREES, Feature.RANDOM_SELECTOR,
                 new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(young_monkey_puzzle_holder, 0.1F)), monkey_puzzle_holder));
         register(context, JUNGLE_FIG_TREES, Feature.RANDOM_SELECTOR,
+                new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(weeping_fig_holder, 0.3F),
+                        new WeightedPlacedFeature(weeping_fig_big_holder, 0.3F),
+                        new WeightedPlacedFeature(indian_laurel_holder, 0.3F)), indian_laurel_big_holder));
+
+        register(context, OLEANDER_SHRUBS, Feature.RANDOM_SELECTOR,
                 new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(weeping_fig_holder, 0.3F),
                         new WeightedPlacedFeature(weeping_fig_big_holder, 0.3F),
                         new WeightedPlacedFeature(indian_laurel_holder, 0.3F)), indian_laurel_big_holder));
