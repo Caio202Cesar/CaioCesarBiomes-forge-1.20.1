@@ -34,6 +34,7 @@ public class ModVegetationFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> MONKEY_PUZZLE_TREES = ModConfiguredFeatures.registerKey("monkey_puzzle_trees");
     public static final ResourceKey<ConfiguredFeature<?, ?>> JUNGLE_FIG_TREES = ModConfiguredFeatures.registerKey("jungle_fig_trees");
     public static final ResourceKey<ConfiguredFeature<?, ?>> OLEANDER_SHRUBS = ModConfiguredFeatures.registerKey("oleander_shrubs");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MEDITERRANEAN_CONIFERS = ModConfiguredFeatures.registerKey("mediterranean_conifers");
 
     //Plants
     public static final ResourceKey<ConfiguredFeature<?, ?>> PATCH_TROPICAL_PLANTS = ModConfiguredFeatures.registerKey("patch_tropical_plants");
@@ -49,10 +50,14 @@ public class ModVegetationFeatures {
         final Holder<PlacedFeature> indian_laurel_holder = featureHolderGetter.getOrThrow(ModTreePlacements.INDIAN_LAUREL_CHECKED);
         final Holder<PlacedFeature> indian_laurel_big_holder = featureHolderGetter.getOrThrow(ModTreePlacements.BIG_INDIAN_LAUREL_CHECKED);
 
-        final Holder<PlacedFeature> pink_oleander_holder = featureHolderGetter.getOrThrow(ModTreePlacements.);
-        final Holder<PlacedFeature> dark_pink_oleander_holder = featureHolderGetter.getOrThrow(ModTreePlacements.);
-        final Holder<PlacedFeature> red_oleander_holder = featureHolderGetter.getOrThrow(ModTreePlacements.);
-        final Holder<PlacedFeature> white_oleander_holder = featureHolderGetter.getOrThrow(ModTreePlacements.);
+        final Holder<PlacedFeature> pink_oleander_holder = featureHolderGetter.getOrThrow(ModTreePlacements.PINK_OLEANDER_CHECKED);
+        final Holder<PlacedFeature> dark_pink_oleander_holder = featureHolderGetter.getOrThrow(ModTreePlacements.DARK_PINK_OLEANDER_CHECKED);
+        final Holder<PlacedFeature> red_oleander_holder = featureHolderGetter.getOrThrow(ModTreePlacements.RED_OLEANDER_CHECKED);
+        final Holder<PlacedFeature> white_oleander_holder = featureHolderGetter.getOrThrow(ModTreePlacements.WHITE_OLEANDER_CHECKED);
+
+        final Holder<PlacedFeature> italian_cypress_holder = featureHolderGetter.getOrThrow(ModTreePlacements.ITALIAN_CYPRESS_CHECKED);
+        final Holder<PlacedFeature> stonepine1_holder = featureHolderGetter.getOrThrow(ModTreePlacements.STONE_PINE1_CHECKED);
+        final Holder<PlacedFeature> stonepine2_holder = featureHolderGetter.getOrThrow(ModTreePlacements.STONE_PINE2_CHECKED);
 
         //Trees
         register(context, MONKEY_PUZZLE_TREES, Feature.RANDOM_SELECTOR,
@@ -61,11 +66,13 @@ public class ModVegetationFeatures {
                 new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(weeping_fig_holder, 0.3F),
                         new WeightedPlacedFeature(weeping_fig_big_holder, 0.3F),
                         new WeightedPlacedFeature(indian_laurel_holder, 0.3F)), indian_laurel_big_holder));
-
         register(context, OLEANDER_SHRUBS, Feature.RANDOM_SELECTOR,
-                new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(weeping_fig_holder, 0.3F),
-                        new WeightedPlacedFeature(weeping_fig_big_holder, 0.3F),
-                        new WeightedPlacedFeature(indian_laurel_holder, 0.3F)), indian_laurel_big_holder));
+                new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(white_oleander_holder, 0.3F),
+                        new WeightedPlacedFeature(red_oleander_holder, 0.3F),
+                        new WeightedPlacedFeature(dark_pink_oleander_holder, 0.3F)), pink_oleander_holder));
+        register(context, MEDITERRANEAN_CONIFERS, Feature.RANDOM_SELECTOR,
+                new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(stonepine2_holder, 0.1F),
+                        new WeightedPlacedFeature(italian_cypress_holder, 0.5F)), stonepine1_holder));
 
         //Plants
         register(context, PATCH_TROPICAL_PLANTS, Feature.RANDOM_PATCH, grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()

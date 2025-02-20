@@ -87,6 +87,8 @@ public class ModTreePlacements {
                 featureHolderGetter.getOrThrow(ModTreeFeatures.WINDSWEPT_AUTUMNAL_ORANGE_SOUTHERN_BEECH_KEY);
 
         final Holder<ConfiguredFeature<?, ?>> italian_cypress_holder = featureHolderGetter.getOrThrow(ModTreeFeatures.ITALIAN_CYPRESS_KEY);
+        final Holder<ConfiguredFeature<?, ?>> stonepine1_holder = featureHolderGetter.getOrThrow(ModTreeFeatures.STONE_PINE1_KEY);
+        final Holder<ConfiguredFeature<?, ?>> stonepine2_holder = featureHolderGetter.getOrThrow(ModTreeFeatures.STONE_PINE2_KEY);
 
         final Holder<ConfiguredFeature<?, ?>> pink_oleander_holder = featureHolderGetter.getOrThrow(ModTreeFeatures.PINK_OLEANDER_KEY);
         final Holder<ConfiguredFeature<?, ?>> dark_pink_oleander_holder = featureHolderGetter.getOrThrow(ModTreeFeatures.DARK_PINK_OLEANDER_KEY);
@@ -114,6 +116,8 @@ public class ModTreePlacements {
                 ModBlocks.ORANGE_SOUTHERN_BEECH_SAPLING.get()));
 
         register(context, ITALIAN_CYPRESS_CHECKED, italian_cypress_holder, PlacementUtils.filteredByBlockSurvival(ModBlocks.ITALIAN_CYPRESS_SAPLING.get()));
+        register(context, STONE_PINE1_CHECKED, stonepine1_holder, PlacementUtils.filteredByBlockSurvival(ModBlocks.STONE_PINE_SAPLING.get()));
+        register(context, STONE_PINE2_CHECKED, stonepine2_holder, PlacementUtils.filteredByBlockSurvival(ModBlocks.STONE_PINE_SAPLING.get()));
 
         register(context, PINK_OLEANDER_CHECKED, pink_oleander_holder, PlacementUtils.filteredByBlockSurvival(ModBlocks.OLEANDER_PINK_SAPLING.get()));
         register(context, DARK_PINK_OLEANDER_CHECKED, dark_pink_oleander_holder, PlacementUtils.filteredByBlockSurvival(ModBlocks.OLEANDER_DARK_PINK_SAPLING.get()));

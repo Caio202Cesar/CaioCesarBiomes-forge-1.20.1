@@ -11,4 +11,16 @@ public class ModBiomeDefaultFeatures {
     public static void addJungleFigTrees(BiomeGenerationSettings.Builder pBuilder) {
         pBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModVegetationPlacements.TREES_JUNGLE_FIG);
     }
+    public static void addOleanderShrubs(BiomeGenerationSettings.Builder pBuilder) {
+        pBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModVegetationPlacements.OLEANDER);
+    }
+    public static void addScrublandOleanderShrubs(BiomeGenerationSettings.Builder pBuilder) {
+        pBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModVegetationPlacements.SCRUBLAND_OLEANDER);
+    }
+    public static void addMediterraneanConifers(BiomeGenerationSettings.Builder pBuilder) {
+        pBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModVegetationPlacements.MEDITERRANEAN_CONIFERS);
+    }
+    public static void addScrublandMediterraneanConifers(BiomeGenerationSettings.Builder pBuilder) {
+        pBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModVegetationPlacements.SCRUBLAND_MEDITERRANEAN_CONIFERS);
+    }
 }
