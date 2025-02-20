@@ -155,6 +155,36 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.AVOCADO_PLANKS.get());
         this.dropSelf(ModBlocks.AVOCADO_SAPLING.get());
 
+        this.dropSelf(ModBlocks.CITRUS_LOG.get());
+        this.dropSelf(ModBlocks.CITRUS_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_CITRUS_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_CITRUS_WOOD.get());
+        this.dropSelf(ModBlocks.CITRUS_PLANKS.get());
+        this.dropSelf(ModBlocks.LEMON_SAPLING.get());
+        this.dropSelf(ModBlocks.CITRON_SAPLING.get());
+        this.dropSelf(ModBlocks.BUDDHA_HAND_SAPLING.get());
+        this.dropSelf(ModBlocks.TAHITI_LIME_SAPLING.get());
+
+        this.dropSelf(ModBlocks.STARFRUIT_LOG.get());
+        this.dropSelf(ModBlocks.STARFRUIT_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_STARFRUIT_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_STARFRUIT_WOOD.get());
+        this.dropSelf(ModBlocks.STARFRUIT_PLANKS.get());
+        this.dropSelf(ModBlocks.STARFRUIT_SAPLING.get());
+
+        this.dropSelf(ModBlocks.BLACK_POPLAR_SAPLING.get());
+        this.add(ModBlocks.BLACK_POPLAR_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.BLACK_POPLAR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.dropSelf(ModBlocks.POPLAR_LOG.get());
+        this.dropSelf(ModBlocks.POPLAR_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_POPLAR_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_POPLAR_WOOD.get());
+        this.dropSelf(ModBlocks.POPLAR_PLANKS.get());
+        this.dropSelf(ModBlocks.BLACK_POPLAR_SAPLING.get());
+        this.add(ModBlocks.BLACK_POPLAR_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.BLACK_POPLAR_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
         this.dropSelf(ModBlocks.BASIL.get());
         this.add(ModBlocks.POTTED_BASIL.get(), createPotFlowerItemTable(ModBlocks.BASIL.get()));
         this.dropSelf(ModBlocks.PURPLE_BASIL.get());

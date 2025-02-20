@@ -72,6 +72,9 @@ public class ModTreeFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> BUDDHA_HAND_KEY = ModConfiguredFeatures.registerKey("buddha_hand_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TAHITI_LIME_KEY = ModConfiguredFeatures.registerKey("tahiti_lime_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> STARFRUIT_KEY = ModConfiguredFeatures.registerKey("starfruit_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> RED_KAPOK_KEY = ModConfiguredFeatures.registerKey("red_kapok");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FREMONT_COTTONWOOD_KEY = ModConfiguredFeatures.registerKey("fremont_cottonwood");
+
 
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
@@ -360,6 +363,23 @@ public class ModTreeFeatures {
                 BlockStateProvider.simple(ModBlocks.STARFRUIT_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        //Red Kapok
+        register(context, RED_KAPOK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(Blocks.JUNGLE_LOG.defaultBlockState()),
+                new FancyTrunkPlacer(3, 11, 0),
+                BlockStateProvider.simple(ModBlocks.RED_KAPOK_LEAVES.get()),
+                new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 4),
+                new TwoLayersFeatureSize(0, 0, 0,OptionalInt.of(4))).build());
+
+        //Fremont Poplar
+        register(context, FREMONT_COTTONWOOD_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.POPLAR_LOG.get()),
+                new FancyTrunkPlacer(3, 11, 0),
+                BlockStateProvider.simple(ModBlocks.FREMONT_COTTONWOOD_LEAVES.get()),
+                new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 4),
+                new TwoLayersFeatureSize(0, 0, 0,OptionalInt.of(4))).build());
+
     }
 
     private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC config) {

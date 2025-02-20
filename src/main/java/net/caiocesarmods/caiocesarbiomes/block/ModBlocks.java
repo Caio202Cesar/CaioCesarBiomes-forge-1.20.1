@@ -412,6 +412,14 @@ public class ModBlocks {
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.STARFRUIT_SAPLING,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
 
+    public static final RegistryObject<Block> RED_KAPOK_LEAVES = registerBlock("red_kapok_leaves",
+            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
+    public static final RegistryObject<Block> RED_KAPOK_SAPLING = registerBlock("red_kapok_sapling",
+            () -> new SaplingBlock(new RedKapokTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_RED_KAPOK_SAPLING = registerBlock("potted_red_kapok_sapling",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.RED_KAPOK_SAPLING,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
+
     /*public static final RegistryObject<Block> TROPICAL_HIBISCUS = registerBlock("tropical_hibiscus",
             () -> new TallFlowerBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH)));
     public static final RegistryObject<Block> SPIDER_LILY = registerBlock("spider_lily",
@@ -446,8 +454,20 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> POPLAR_PLANKS = registerBlock("poplar_planks",
             () -> new ModPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final RegistryObject<Block> BLACK_POPLAR_LEAVES = registerBlock("black_poplar_leaves",
+            () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
+    public static final RegistryObject<Block> BLACK_POPLAR_SAPLING = registerBlock("black_poplar_sapling",
+            () -> new SaplingBlock(new BlackPoplarTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_BLACK_POPLAR_SAPLING = registerBlock("potted_black_poplar_sapling",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.BLACK_POPLAR_SAPLING,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
     public static final RegistryObject<Block> FREMONT_COTTONWOOD_LEAVES = registerBlock("fremont_cottonwood_leaves",
             () -> new ModLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
+    public static final RegistryObject<Block> FREMONT_COTTONWOOD_SAPLING = registerBlock("fremont_cottonwood_sapling",
+            () -> new SaplingBlock(new FremontCottonwoodTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_FREMONT_COTTONWOOD_SAPLING = registerBlock("potted_fremont_cottonwood_sapling",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.FREMONT_COTTONWOOD_SAPLING,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
