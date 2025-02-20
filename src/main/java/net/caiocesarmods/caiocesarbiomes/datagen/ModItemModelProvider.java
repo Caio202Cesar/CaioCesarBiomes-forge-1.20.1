@@ -51,6 +51,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         saplingItem(ModBlocks.HOLM_OAK_SAPLING);
         saplingItem(ModBlocks.CORK_OAK_SAPLING);
         saplingItem(ModBlocks.PLANE_SAPLING);
+        saplingItem(ModBlocks.CRABAPPLE_PINK_SAPLING);
+        saplingItem(ModBlocks.CRABAPPLE_WHITE_SAPLING);
+        saplingItem(ModBlocks.AVOCADO_SAPLING);
+        saplingItem(ModBlocks.STRAWBERRY_TREE_SAPLING);
 
     }
 

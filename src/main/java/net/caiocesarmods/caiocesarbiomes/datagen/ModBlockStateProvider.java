@@ -117,7 +117,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "block/stripped_pomegranate_log_top"));
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_POMEGRANATE_WOOD.get()), blockTexture(ModBlocks.STRIPPED_POMEGRANATE_LOG.get()),
                 blockTexture(ModBlocks.STRIPPED_POMEGRANATE_LOG.get()));
-        leavesBlock(ModBlocks.POMEGRANATE_LEAVES);
         saplingBlock(ModBlocks.POMEGRANATE_SAPLING);
         simpleBlockWithItem(ModBlocks.POTTED_POMEGRANATE_SAPLING.get(), models().singleTexture("potted_pomegranate_sapling",
                 new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.POMEGRANATE_SAPLING.get())).renderType("cutout"));
@@ -191,10 +190,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "block/stripped_avocado_log_top"));
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_AVOCADO_WOOD.get()), blockTexture(ModBlocks.STRIPPED_AVOCADO_LOG.get()),
                 blockTexture(ModBlocks.STRIPPED_AVOCADO_LOG.get()));
-        leavesBlock(ModBlocks.AVOCADO_LEAVES);
         saplingBlock(ModBlocks.AVOCADO_SAPLING);
         simpleBlockWithItem(ModBlocks.POTTED_AVOCADO_SAPLING.get(), models().singleTexture("potted_avocado_sapling",
                 new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.AVOCADO_SAPLING.get())).renderType("cutout"));
+
+        logBlock(((RotatedPillarBlock) ModBlocks.STRAWBERRY_TREE_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRAWBERRY_TREE_WOOD.get()), blockTexture(ModBlocks.STRAWBERRY_TREE_LOG.get()),
+                blockTexture(ModBlocks.STRAWBERRY_TREE_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_STRAWBERRY_TREE_LOG.get()), blockTexture(ModBlocks.STRIPPED_STRAWBERRY_TREE_LOG.get()),
+                new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "block/stripped_strawberry_tree_log_top"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_STRAWBERRY_TREE_WOOD.get()), blockTexture(ModBlocks.STRIPPED_STRAWBERRY_TREE_LOG.get()),
+                blockTexture(ModBlocks.STRIPPED_STRAWBERRY_TREE_LOG.get()));
+        saplingBlock(ModBlocks.STRAWBERRY_TREE_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_STRAWBERRY_TREE_SAPLING.get(), models().singleTexture("potted_strawberry_tree_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.STRAWBERRY_TREE_SAPLING.get())).renderType("cutout"));
 
         blockItem(ModBlocks.ARAUCARIA_LOG);
         blockItem(ModBlocks.ARAUCARIA_WOOD);
@@ -275,6 +284,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_AVOCADO_LOG);
         blockItem(ModBlocks.STRIPPED_AVOCADO_WOOD);
         blockWithItem(ModBlocks.AVOCADO_PLANKS);
+
+        blockItem(ModBlocks.STRAWBERRY_TREE_LOG);
+        blockItem(ModBlocks.STRAWBERRY_TREE_WOOD);
+        blockItem(ModBlocks.STRIPPED_STRAWBERRY_TREE_LOG);
+        blockItem(ModBlocks.STRIPPED_STRAWBERRY_TREE_WOOD);
+        blockWithItem(ModBlocks.STRAWBERRY_TREE_PLANKS);
 
         simpleBlockWithItem(ModBlocks.BASIL.get(), models().cross(blockTexture(ModBlocks.BASIL.get()).getPath(),
                 blockTexture(ModBlocks.BASIL.get())).renderType("cutout"));
