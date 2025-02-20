@@ -205,6 +205,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.POTTED_STRAWBERRY_TREE_SAPLING.get(), models().singleTexture("potted_strawberry_tree_sapling",
                 new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.STRAWBERRY_TREE_SAPLING.get())).renderType("cutout"));
 
+        logBlock(((RotatedPillarBlock) ModBlocks.CITRUS_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.CITRUS_WOOD.get()), blockTexture(ModBlocks.CITRUS_LOG.get()),
+                blockTexture(ModBlocks.CITRUS_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_CITRUS_LOG.get()), blockTexture(ModBlocks.STRIPPED_CITRUS_LOG.get()),
+                new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "block/stripped_citrus_log_top"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_CITRUS_WOOD.get()), blockTexture(ModBlocks.STRIPPED_CITRUS_LOG.get()),
+                blockTexture(ModBlocks.STRIPPED_CITRUS_LOG.get()));
+        saplingBlock(ModBlocks.STRAWBERRY_TREE_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_STRAWBERRY_TREE_SAPLING.get(), models().singleTexture("potted_strawberry_tree_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.STRAWBERRY_TREE_SAPLING.get())).renderType("cutout"));
+
+
+
         blockItem(ModBlocks.ARAUCARIA_LOG);
         blockItem(ModBlocks.ARAUCARIA_WOOD);
         blockItem(ModBlocks.STRIPPED_ARAUCARIA_LOG);
@@ -290,6 +303,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_STRAWBERRY_TREE_LOG);
         blockItem(ModBlocks.STRIPPED_STRAWBERRY_TREE_WOOD);
         blockWithItem(ModBlocks.STRAWBERRY_TREE_PLANKS);
+
+        blockItem(ModBlocks.CITRUS_LOG);
+        blockItem(ModBlocks.CITRUS_WOOD);
+        blockItem(ModBlocks.STRIPPED_CITRUS_LOG);
+        blockItem(ModBlocks.STRIPPED_CITRUS_WOOD);
+        blockWithItem(ModBlocks.CITRUS_PLANKS);
 
         simpleBlockWithItem(ModBlocks.BASIL.get(), models().cross(blockTexture(ModBlocks.BASIL.get()).getPath(),
                 blockTexture(ModBlocks.BASIL.get())).renderType("cutout"));

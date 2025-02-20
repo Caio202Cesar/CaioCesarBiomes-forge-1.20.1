@@ -64,6 +64,9 @@ public class ModTreeFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> BIG_OLIVE_KEY = ModConfiguredFeatures.registerKey("big_olive");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PINK_CRABAPPLE_KEY = ModConfiguredFeatures.registerKey("pink_crabapple");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WHITE_CRABAPPLE_KEY = ModConfiguredFeatures.registerKey("white_crabapple");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> STRAWBERRY_TREE1_KEY = ModConfiguredFeatures.registerKey("strawberry_tree1");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> STRAWBERRY_TREE2_KEY = ModConfiguredFeatures.registerKey("strawberry_tree2");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AVOCADO_KEY = ModConfiguredFeatures.registerKey("avocado_tree");
 
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
@@ -297,7 +300,35 @@ public class ModTreeFeatures {
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
 
+        //Strawberry Tree
+        register(context, STRAWBERRY_TREE1_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.STRAWBERRY_TREE_LOG.get()),
+                new StraightTrunkPlacer(4, 2, 0),
+                BlockStateProvider.simple(ModBlocks.STRAWBERRY_TREE_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+        register(context, STRAWBERRY_TREE2_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.STRAWBERRY_TREE_LOG.get()),
+                new StraightTrunkPlacer(6, 2, 0),
+                BlockStateProvider.simple(ModBlocks.STRAWBERRY_TREE_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
 
+        //Avocado Tree
+        register(context, AVOCADO_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.AVOCADO_LOG.get()),
+                new FancyTrunkPlacer(3, 11, 0),
+                BlockStateProvider.simple(ModBlocks.AVOCADO_LEAVES.get()),
+                new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 4),
+                new TwoLayersFeatureSize(0, 0, 0,OptionalInt.of(4))).build());
+
+        //Citruses
+        register(context, STRAWBERRY_TREE2_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.STRAWBERRY_TREE_LOG.get()),
+                new StraightTrunkPlacer(6, 2, 0),
+                BlockStateProvider.simple(ModBlocks.STRAWBERRY_TREE_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
     }
 
     private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC config) {
