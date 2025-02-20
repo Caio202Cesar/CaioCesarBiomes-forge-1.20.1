@@ -26,6 +26,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_ARAUCARIA_WOOD.get()), blockTexture(ModBlocks.STRIPPED_ARAUCARIA_LOG.get()),
                 blockTexture(ModBlocks.STRIPPED_ARAUCARIA_LOG.get()));
         saplingBlock(ModBlocks.MONKEY_PUZZLE_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_MONKEY_PUZZLE_SAPLING.get(), models().singleTexture("potted_monkey_puzzle_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.MONKEY_PUZZLE_SAPLING.get())).renderType("cutout"));
 
         logBlock(((RotatedPillarBlock) ModBlocks.NOTHOFAGUS_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.NOTHOFAGUS_WOOD.get()), blockTexture(ModBlocks.NOTHOFAGUS_LOG.get()), blockTexture(ModBlocks.NOTHOFAGUS_LOG.get()));
@@ -212,11 +214,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "block/stripped_citrus_log_top"));
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_CITRUS_WOOD.get()), blockTexture(ModBlocks.STRIPPED_CITRUS_LOG.get()),
                 blockTexture(ModBlocks.STRIPPED_CITRUS_LOG.get()));
-        saplingBlock(ModBlocks.STRAWBERRY_TREE_SAPLING);
-        simpleBlockWithItem(ModBlocks.POTTED_STRAWBERRY_TREE_SAPLING.get(), models().singleTexture("potted_strawberry_tree_sapling",
-                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.STRAWBERRY_TREE_SAPLING.get())).renderType("cutout"));
-
-
+        saplingBlock(ModBlocks.LEMON_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_LEMON_SAPLING.get(), models().singleTexture("potted_lemon_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.LEMON_SAPLING.get())).renderType("cutout"));
+        saplingBlock(ModBlocks.CITRON_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_CITRON_SAPLING.get(), models().singleTexture("potted_citron_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.CITRON_SAPLING.get())).renderType("cutout"));
+        saplingBlock(ModBlocks.BUDDHA_HAND_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_BUDDHA_HAND_SAPLING.get(), models().singleTexture("potted_buddha_hand_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.BUDDHA_HAND_SAPLING.get())).renderType("cutout"));
+        saplingBlock(ModBlocks.TAHITI_LIME_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_TAHITI_LIME_SAPLING.get(), models().singleTexture("potted_tahiti_lime_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.TAHITI_LIME_SAPLING.get())).renderType("cutout"));
 
         blockItem(ModBlocks.ARAUCARIA_LOG);
         blockItem(ModBlocks.ARAUCARIA_WOOD);

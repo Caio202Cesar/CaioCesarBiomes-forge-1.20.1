@@ -67,6 +67,11 @@ public class ModTreeFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> STRAWBERRY_TREE1_KEY = ModConfiguredFeatures.registerKey("strawberry_tree1");
     public static final ResourceKey<ConfiguredFeature<?, ?>> STRAWBERRY_TREE2_KEY = ModConfiguredFeatures.registerKey("strawberry_tree2");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AVOCADO_KEY = ModConfiguredFeatures.registerKey("avocado_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LEMON_KEY = ModConfiguredFeatures.registerKey("lemon_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CITRON_KEY = ModConfiguredFeatures.registerKey("citron_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BUDDHA_HAND_KEY = ModConfiguredFeatures.registerKey("buddha_hand_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TAHITI_LIME_KEY = ModConfiguredFeatures.registerKey("tahiti_lime_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> STARFRUIT_KEY = ModConfiguredFeatures.registerKey("starfruit_tree");
 
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
@@ -323,11 +328,37 @@ public class ModTreeFeatures {
                 new TwoLayersFeatureSize(0, 0, 0,OptionalInt.of(4))).build());
 
         //Citruses
-        register(context, STRAWBERRY_TREE2_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.STRAWBERRY_TREE_LOG.get()),
+        register(context, LEMON_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.CITRUS_LOG.get()),
                 new StraightTrunkPlacer(6, 2, 0),
-                BlockStateProvider.simple(ModBlocks.STRAWBERRY_TREE_LEAVES.get()),
+                BlockStateProvider.simple(ModBlocks.LEMON_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+        register(context, CITRON_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.CITRUS_LOG.get()),
+                new StraightTrunkPlacer(6, 2, 0),
+                BlockStateProvider.simple(ModBlocks.CITRON_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+        register(context, BUDDHA_HAND_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.CITRUS_LOG.get()),
+                new StraightTrunkPlacer(6, 2, 0),
+                BlockStateProvider.simple(ModBlocks.BUDDHA_HAND_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+        register(context, TAHITI_LIME_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.CITRUS_LOG.get()),
+                new StraightTrunkPlacer(6, 2, 0),
+                BlockStateProvider.simple(ModBlocks.TAHITI_LIME_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        //Starfruit
+        register(context, STARFRUIT_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.STARFRUIT_LOG.get()),
+                new StraightTrunkPlacer(4, 2, 0),
+                BlockStateProvider.simple(ModBlocks.STARFRUIT_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
     }
 

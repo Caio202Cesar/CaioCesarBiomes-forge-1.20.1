@@ -86,6 +86,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.STRIPPED_AVOCADO_LOG.get())
                 .add(ModBlocks.AVOCADO_WOOD.get())
                 .add(ModBlocks.STRIPPED_AVOCADO_WOOD.get())
+
+                .add(ModBlocks.STRAWBERRY_TREE_LOG.get())
+                .add(ModBlocks.STRIPPED_STRAWBERRY_TREE_LOG.get())
+                .add(ModBlocks.STRAWBERRY_TREE_WOOD.get())
+                .add(ModBlocks.STRIPPED_STRAWBERRY_TREE_WOOD.get())
+
+                .add(ModBlocks.CITRUS_LOG.get())
+                .add(ModBlocks.STRIPPED_CITRUS_LOG.get())
+                .add(ModBlocks.CITRUS_WOOD.get())
+                .add(ModBlocks.STRIPPED_CITRUS_WOOD.get())
         ;
 
         this.tag(BlockTags.PLANKS)
@@ -101,7 +111,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.HOLM_OAK_PLANKS.get())
                 .add(ModBlocks.PLANE_PLANKS.get())
                 .add(ModBlocks.CRABAPPLE_PLANKS.get())
-                .add(ModBlocks.AVOCADO_LEAVES.get())
+                .add(ModBlocks.AVOCADO_PLANKS.get())
+                .add(ModBlocks.STRAWBERRY_TREE_PLANKS.get())
+                .add(ModBlocks.CITRUS_PLANKS.get())
+
         ;
 
     }

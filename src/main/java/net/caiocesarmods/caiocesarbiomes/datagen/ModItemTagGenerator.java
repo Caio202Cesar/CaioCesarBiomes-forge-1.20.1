@@ -26,14 +26,37 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModBlocks.STRIPPED_ARAUCARIA_LOG.get().asItem())
                 .add(ModBlocks.ARAUCARIA_WOOD.get().asItem())
                 .add(ModBlocks.STRIPPED_ARAUCARIA_WOOD.get().asItem())
+
+                .add(ModBlocks.NOTHOFAGUS_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_NOTHOFAGUS_LOG.get().asItem())
+                .add(ModBlocks.NOTHOFAGUS_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_NOTHOFAGUS_WOOD.get().asItem())
+
                 .add(ModBlocks.JUNGLE_FIG_LOG.get().asItem())
+                .add(ModBlocks.FIG_LOG.get().asItem())
                 .add(ModBlocks.STRIPPED_FIG_LOG.get().asItem())
                 .add(ModBlocks.JUNGLE_FIG_WOOD.get().asItem())
+                .add(ModBlocks.FIG_WOOD.get().asItem())
                 .add(ModBlocks.STRIPPED_FIG_WOOD.get().asItem())
+
+                .add(ModBlocks.ITALIAN_CYPRESS_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_ITALIAN_CYPRESS_LOG.get().asItem())
+                .add(ModBlocks.ITALIAN_CYPRESS_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_ITALIAN_CYPRESS_WOOD.get().asItem())
+
+                .add(ModBlocks.STONE_PINE_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_PINE_LOG.get().asItem())
+                .add(ModBlocks.STONE_PINE_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_PINE_WOOD.get().asItem())
         ;
 
         this.tag(ItemTags.PLANKS)
                 .add(ModBlocks.ARAUCARIA_PLANKS.get().asItem())
-                .add(ModBlocks.FIG_PLANKS.get().asItem());
+                .add(ModBlocks.NOTHOFAGUS_PLANKS.get().asItem())
+                .add(ModBlocks.FIG_PLANKS.get().asItem())
+                .add(ModBlocks.ITALIAN_CYPRESS_PLANKS.get().asItem())
+                .add(ModBlocks.PINE_PLANKS.get().asItem())
+
+        ;
     }
 }
