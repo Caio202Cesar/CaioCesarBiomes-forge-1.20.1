@@ -30,7 +30,7 @@ public class ModEditedRegions extends Region {
             //Outback = subtropical badlands
 
             //Forest
-            builder.replaceBiome(Biomes.FOREST, TemperateDeciduousForestBiome.TEMPERATE_DECIDUOUS_FOREST); //It is basically the Vanilla Forest biome, but featuring a more diverse flora, with planes and other trees;
+            //builder.replaceBiome(Biomes.FOREST, TemperateDeciduousForestBiome.TEMPERATE_DECIDUOUS_FOREST); //It is basically the Vanilla Forest biome, but featuring a more diverse flora, with planes and other trees;
             //builder.replaceBiome(Biomes.FOREST, SubtropicalDeciduousForestBiome.SUBTROPICAL_DECIDUOUS_FOREST); //Warmer/subtropical variant
             //builder.replaceBiome(Biomes.FOREST, ContinentalMixedForestBiome.CONTINENTAL_MIXED_FOREST); //Or Hemiboreal Forest, the colder variant
             //builder.replaceBiome(Biomes.FOREST, JapaneseMapleGroveBiome.JAPANESE_MAPLE_GROVE);
