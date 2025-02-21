@@ -1,6 +1,7 @@
 package net.caiocesarmods.caiocesarbiomes.worldgen.biome;
-
+/*
 import com.mojang.datafixers.util.Pair;
+import net.caiocesarmods.caiocesarbiomes.worldgen.biome.ModBiomes.AutumnalPewenGroveBiome;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -13,7 +14,7 @@ import terrablender.api.VanillaParameterOverlayBuilder;
 
 import java.util.function.Consumer;
 
-/*public class ModOverworldRegions extends Region {
+public class ModOverworldRegions extends Region {
     public ModOverworldRegions(ResourceLocation name, int weight) {
         super(name, RegionType.OVERWORLD, weight);
     }
@@ -30,7 +31,7 @@ import java.util.function.Consumer;
                 .erosion(ParameterUtils.Erosion.EROSION_0, ParameterUtils.Erosion.EROSION_1)
                 .depth(ParameterUtils.Depth.FLOOR, ParameterUtils.Depth.FLOOR)
                 .weirdness(ParameterUtils.Weirdness.PEAK_NORMAL, ParameterUtils.Weirdness.PEAK_VARIANT)
-                .build().forEach(point -> builder.add(point, AutumnalPewenGroveBiome.AUTUMNAL_PEWEN_CONIFEROUS_GROVE));
+                .build().forEach(point -> builder.add(point, MediterraneanConiferousSavannaBiome.MEDITERRANEAN_CONIFEROUS_SAVANNA));
 
         // Add our points to the mapper
         builder.build().forEach(mapper);

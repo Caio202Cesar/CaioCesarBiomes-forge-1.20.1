@@ -36,6 +36,8 @@ public class ModVegetationFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> OLEANDER_SHRUBS = ModConfiguredFeatures.registerKey("oleander_shrubs");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MEDITERRANEAN_CONIFERS = ModConfiguredFeatures.registerKey("mediterranean_conifers");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AUTUMNAL_SOUTHERN_BEECHES = ModConfiguredFeatures.registerKey("autumnal_southern_beeches");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TROPICAL_CITRUS_TREES = ModConfiguredFeatures.registerKey("tropical_citrus_trees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TROPICAL_RAINFOREST_TREES = ModConfiguredFeatures.registerKey("tropical_rainforest_trees");
 
     //Plants
     public static final ResourceKey<ConfiguredFeature<?, ?>> PATCH_TROPICAL_PLANTS = ModConfiguredFeatures.registerKey("patch_tropical_plants");
@@ -66,6 +68,15 @@ public class ModVegetationFeatures {
         final Holder<PlacedFeature> stonepine1_holder = featureHolderGetter.getOrThrow(ModTreePlacements.STONE_PINE1_CHECKED);
         final Holder<PlacedFeature> stonepine2_holder = featureHolderGetter.getOrThrow(ModTreePlacements.STONE_PINE2_CHECKED);
 
+        final Holder<PlacedFeature> lemon_holder = featureHolderGetter.getOrThrow(ModTreePlacements.LEMON_CHECKED);
+        final Holder<PlacedFeature> citron_holder = featureHolderGetter.getOrThrow(ModTreePlacements.CITRON_CHECKED);
+        final Holder<PlacedFeature> buddha_hand_holder = featureHolderGetter.getOrThrow(ModTreePlacements.BUDDHA_HAND_CHECKED);
+        final Holder<PlacedFeature> tahiti_lime_holder = featureHolderGetter.getOrThrow(ModTreePlacements.TAHITI_LIME_CHECKED);
+
+        final Holder<PlacedFeature> avocado_holder = featureHolderGetter.getOrThrow(ModTreePlacements.AVOCADO_CHECKED);
+        final Holder<PlacedFeature> starfruit_holder = featureHolderGetter.getOrThrow(ModTreePlacements.STARFRUIT_CHECKED);
+        final Holder<PlacedFeature> red_kapok_holder = featureHolderGetter.getOrThrow(ModTreePlacements.RED_KAPOK_CHECKED);
+
         //Trees
         register(context, MONKEY_PUZZLE_TREES, Feature.RANDOM_SELECTOR,
                 new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(young_monkey_puzzle_holder, 0.1F)), monkey_puzzle_holder));
@@ -81,9 +92,16 @@ public class ModVegetationFeatures {
                 new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(stonepine2_holder, 0.1F),
                         new WeightedPlacedFeature(italian_cypress_holder, 0.5F)), stonepine1_holder));
         register(context, AUTUMNAL_SOUTHERN_BEECHES, Feature.RANDOM_SELECTOR,
-                new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(windswept_crimson_beech_holder, 0.02F),
-                        new WeightedPlacedFeature(windswept_orange_beech_holder, 0.03F),
+                new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(windswept_crimson_beech_holder, 0.08F),
+                        new WeightedPlacedFeature(windswept_orange_beech_holder, 0.09F),
                         new WeightedPlacedFeature(crimson_beech_holder, 0.5F)), orange_beech_holder));
+        register(context, TROPICAL_CITRUS_TREES, Feature.RANDOM_SELECTOR,
+                new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(buddha_hand_holder, 0.4F),
+                        new WeightedPlacedFeature(citron_holder, 0.3F),
+                        new WeightedPlacedFeature(tahiti_lime_holder, 0.5F)), lemon_holder));
+        register(context, TROPICAL_RAINFOREST_TREES, Feature.RANDOM_SELECTOR,
+                new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(red_kapok_holder, 0.08F),
+                        new WeightedPlacedFeature(starfruit_holder, 0.2F)), avocado_holder));
 
         //Plants
         register(context, PATCH_TROPICAL_PLANTS, Feature.RANDOM_PATCH, grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()

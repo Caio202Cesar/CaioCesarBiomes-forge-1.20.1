@@ -66,7 +66,13 @@ public class ModTreePlacements {
     public static final ResourceKey<PlacedFeature> STRAWBERRY_TREE2_CHECKED = ModPlacedFeatures.registerKey("strawberry_tree2_checked");
 
     public static final ResourceKey<PlacedFeature> AVOCADO_CHECKED = ModPlacedFeatures.registerKey("avocado_checked");
+    public static final ResourceKey<PlacedFeature> STARFRUIT_CHECKED = ModPlacedFeatures.registerKey("starfruit_checked");
+    public static final ResourceKey<PlacedFeature> RED_KAPOK_CHECKED = ModPlacedFeatures.registerKey("red_kapok_checked");
 
+    public static final ResourceKey<PlacedFeature> LEMON_CHECKED = ModPlacedFeatures.registerKey("lemon_checked");
+    public static final ResourceKey<PlacedFeature> CITRON_CHECKED = ModPlacedFeatures.registerKey("citron_checked");
+    public static final ResourceKey<PlacedFeature> BUDDHA_HAND_CHECKED = ModPlacedFeatures.registerKey("buddha_hand_checked");
+    public static final ResourceKey<PlacedFeature> TAHITI_LIME_CHECKED = ModPlacedFeatures.registerKey("tahiti_lime_checked");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> featureHolderGetter = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -97,6 +103,14 @@ public class ModTreePlacements {
 
         final Holder<ConfiguredFeature<?, ?>> fig_holder = featureHolderGetter.getOrThrow(ModTreeFeatures.FIG_KEY);
 
+        final Holder<ConfiguredFeature<?, ?>> avocado_holder = featureHolderGetter.getOrThrow(ModTreeFeatures.AVOCADO_KEY);
+        final Holder<ConfiguredFeature<?, ?>> starfruit_holder = featureHolderGetter.getOrThrow(ModTreeFeatures.STARFRUIT_KEY);
+        final Holder<ConfiguredFeature<?, ?>> red_kapok_holder = featureHolderGetter.getOrThrow(ModTreeFeatures.RED_KAPOK_KEY);
+
+        final Holder<ConfiguredFeature<?, ?>> lemon_holder = featureHolderGetter.getOrThrow(ModTreeFeatures.LEMON_KEY);
+        final Holder<ConfiguredFeature<?, ?>> citron_holder = featureHolderGetter.getOrThrow(ModTreeFeatures.CITRON_KEY);
+        final Holder<ConfiguredFeature<?, ?>> buddha_hand_holder = featureHolderGetter.getOrThrow(ModTreeFeatures.BUDDHA_HAND_KEY);
+        final Holder<ConfiguredFeature<?, ?>> tahiti_lime_holder = featureHolderGetter.getOrThrow(ModTreeFeatures.TAHITI_LIME_KEY);
 
         register(context, MONKEY_PUZZLE_CHECKED, monkey_puzzle_holder, PlacementUtils.filteredByBlockSurvival(ModBlocks.MONKEY_PUZZLE_SAPLING.get()));
         register(context, YOUNG_MONKEY_PUZZLE_CHECKED, young_monkey_puzzle_holder, PlacementUtils.filteredByBlockSurvival(ModBlocks.MONKEY_PUZZLE_SAPLING.get()));
@@ -125,6 +139,15 @@ public class ModTreePlacements {
         register(context, WHITE_OLEANDER_CHECKED, white_oleander_holder, PlacementUtils.filteredByBlockSurvival(ModBlocks.OLEANDER_WHITE_SAPLING.get()));
 
         register(context, FIG_CHECKED, fig_holder, PlacementUtils.filteredByBlockSurvival(ModBlocks.FIG_SAPLING.get()));
+
+        register(context, AVOCADO_CHECKED, avocado_holder, PlacementUtils.filteredByBlockSurvival(ModBlocks.AVOCADO_SAPLING.get()));
+        register(context, STARFRUIT_CHECKED, starfruit_holder, PlacementUtils.filteredByBlockSurvival(ModBlocks.STARFRUIT_SAPLING.get()));
+        register(context, RED_KAPOK_CHECKED, red_kapok_holder, PlacementUtils.filteredByBlockSurvival(ModBlocks.RED_KAPOK_SAPLING.get()));
+
+        register(context, LEMON_CHECKED, lemon_holder, PlacementUtils.filteredByBlockSurvival(ModBlocks.LEMON_SAPLING.get()));
+        register(context, CITRON_CHECKED, citron_holder, PlacementUtils.filteredByBlockSurvival(ModBlocks.CITRON_SAPLING.get()));
+        register(context, BUDDHA_HAND_CHECKED, buddha_hand_holder, PlacementUtils.filteredByBlockSurvival(ModBlocks.BUDDHA_HAND_SAPLING.get()));
+        register(context, TAHITI_LIME_CHECKED, tahiti_lime_holder, PlacementUtils.filteredByBlockSurvival(ModBlocks.TAHITI_LIME_SAPLING.get()));
 
     }
 

@@ -1,4 +1,4 @@
-/*package net.caiocesarmods.caiocesarbiomes.worldgen.biome.ModBiomes;
+package net.caiocesarmods.caiocesarbiomes.worldgen.biome.ModBiomes;
 
 import net.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
 import net.caiocesarmods.caiocesarbiomes.data.worldgen.placement.ModVegetationPlacements;

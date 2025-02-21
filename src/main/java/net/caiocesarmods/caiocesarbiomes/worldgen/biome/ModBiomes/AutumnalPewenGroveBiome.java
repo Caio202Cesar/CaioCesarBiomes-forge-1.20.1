@@ -1,6 +1,7 @@
-/*package net.caiocesarmods.caiocesarbiomes.worldgen.biome.ModBiomes;
+package net.caiocesarmods.caiocesarbiomes.worldgen.biome.ModBiomes;
 
 import net.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
+import net.caiocesarmods.caiocesarbiomes.data.worldgen.ModBiomeDefaultFeatures;
 import net.caiocesarmods.caiocesarbiomes.data.worldgen.placement.ModVegetationPlacements;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
@@ -45,7 +46,8 @@ public class AutumnalPewenGroveBiome {
         BiomeDefaultFeatures.addFerns(biomeBuilder);
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
 
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModVegetationPlacements.TREES_MONKEY_PUZZLE);
+        ModBiomeDefaultFeatures.addMonkeyPuzzleTrees(biomeBuilder);
+        ModBiomeDefaultFeatures.addAutumnalSouthernBeeches(biomeBuilder);
 
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
@@ -68,4 +70,4 @@ public class AutumnalPewenGroveBiome {
                         .fogColor(0x22a1e6)
                         .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS).build()).build();
     }
-}*/
+}

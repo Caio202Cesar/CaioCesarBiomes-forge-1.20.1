@@ -26,4 +26,13 @@ public class ModBiomeDefaultFeatures {
     public static void addScrublandMediterraneanConifers(BiomeGenerationSettings.Builder pBuilder) {
         pBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModVegetationPlacements.SCRUBLAND_MEDITERRANEAN_CONIFERS);
     }
+    public static void addTropicalCitruses(BiomeGenerationSettings.Builder pBuilder) {
+        pBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModVegetationPlacements.TROPICAL_CITRUSES);
+    }
+    public static void addTropicalRainforestTrees(BiomeGenerationSettings.Builder pBuilder) {
+        pBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModVegetationPlacements.TREES_TROPICAL_RAINFOREST);
+    }
+    public static void addTropicalPlants(BiomeGenerationSettings.Builder pBuilder) {
+        pBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModVegetationPlacements.TROPICAL_PLANTS);
+    }
 }

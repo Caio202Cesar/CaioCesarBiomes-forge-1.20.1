@@ -1,7 +1,7 @@
 package net.caiocesarmods.caiocesarbiomes.worldgen.biome.ModBiomes;
 
 import net.caiocesarmods.caiocesarbiomes.CaioCesarBiomesMod;
-/*import net.caiocesarmods.caiocesarbiomes.data.worldgen.ModBiomeDefaultFeatures;
+import net.caiocesarmods.caiocesarbiomes.data.worldgen.ModBiomeDefaultFeatures;
 import net.caiocesarmods.caiocesarbiomes.data.worldgen.placement.ModVegetationPlacements;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
@@ -34,9 +34,10 @@ public class TropicalRainforestBiome {
     public static Biome tropicalRainforest(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
-        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.LLAMA, 5, 4, 4));
-
-        BiomeDefaultFeatures.farmAnimals(spawnBuilder);
+        BiomeDefaultFeatures.baseJungleSpawns(spawnBuilder);
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.PARROT, 40, 1, 2))
+                .addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.OCELOT, 2, 1, 3))
+                .addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.PANDA, 1, 1, 2));
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
 
         BiomeGenerationSettings.Builder biomeBuilder =
@@ -48,27 +49,32 @@ public class TropicalRainforestBiome {
         BiomeDefaultFeatures.addFerns(biomeBuilder);
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
 
-//Add jungle biome features
+        BiomeDefaultFeatures.addWarmFlowers(biomeBuilder);
+        BiomeDefaultFeatures.addJungleGrass(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
+        BiomeDefaultFeatures.addJungleVines(biomeBuilder);
+        BiomeDefaultFeatures.addJungleTrees(biomeBuilder);
+        BiomeDefaultFeatures.addLightBambooVegetation(biomeBuilder);
+        BiomeDefaultFeatures.addJungleMelons(biomeBuilder);
         ModBiomeDefaultFeatures.addJungleFigTrees(biomeBuilder);
-
-        BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
-        BiomeDefaultFeatures.addInfestedStone(biomeBuilder);
+        ModBiomeDefaultFeatures.addTropicalCitruses(biomeBuilder);
+        ModBiomeDefaultFeatures.addTropicalPlants(biomeBuilder);
+        ModBiomeDefaultFeatures.addTropicalRainforestTrees(biomeBuilder);
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(true)
-                .downfall(0.95f)
-                .temperature(0.5f)
+                .downfall(0.9f)
+                .temperature(1.0f)
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
                         .waterColor(0xe82e3b)
                         .waterFogColor(0xbf1b26)
                         .skyColor(0x30c918)
-                        .grassColorOverride(0x7f03fc)
-                        .foliageColorOverride(0xd203fc)
+                        .grassColorOverride(0x59c93c)
+                        .foliageColorOverride(0x30bb0b)
                         .fogColor(0x22a1e6)
                         .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS).build()).build();
     }
-}*/
+}
