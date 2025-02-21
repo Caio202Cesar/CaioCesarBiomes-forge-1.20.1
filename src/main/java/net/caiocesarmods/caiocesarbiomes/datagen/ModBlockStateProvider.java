@@ -227,6 +227,37 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.POTTED_TAHITI_LIME_SAPLING.get(), models().singleTexture("potted_tahiti_lime_sapling",
                 new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.TAHITI_LIME_SAPLING.get())).renderType("cutout"));
 
+        logBlock(((RotatedPillarBlock) ModBlocks.STARFRUIT_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STARFRUIT_WOOD.get()), blockTexture(ModBlocks.STARFRUIT_LOG.get()),
+                blockTexture(ModBlocks.STARFRUIT_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_STARFRUIT_LOG.get()), blockTexture(ModBlocks.STRIPPED_STARFRUIT_LOG.get()),
+                new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "block/stripped_starfruit_log_top"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_STARFRUIT_WOOD.get()), blockTexture(ModBlocks.STRIPPED_STARFRUIT_LOG.get()),
+                blockTexture(ModBlocks.STRIPPED_STARFRUIT_LOG.get()));
+        saplingBlock(ModBlocks.STARFRUIT_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_STARFRUIT_SAPLING.get(), models().singleTexture("potted_starfruit_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.STARFRUIT_SAPLING.get())).renderType("cutout"));
+
+        leavesBlock(ModBlocks.RED_KAPOK_LEAVES);
+        saplingBlock(ModBlocks.RED_KAPOK_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_RED_KAPOK_SAPLING.get(), models().singleTexture("potted_red_kapok_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.RED_KAPOK_SAPLING.get())).renderType("cutout"));
+
+        logBlock(((RotatedPillarBlock) ModBlocks.POPLAR_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.POPLAR_WOOD.get()), blockTexture(ModBlocks.POPLAR_LOG.get()), blockTexture(ModBlocks.POPLAR_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_POPLAR_LOG.get()), blockTexture(ModBlocks.STRIPPED_POPLAR_LOG.get()),
+                new ResourceLocation(CaioCesarBiomesMod.MOD_ID, "block/stripped_poplar_log_top"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_POPLAR_WOOD.get()), blockTexture(ModBlocks.STRIPPED_POPLAR_LOG.get()),
+                blockTexture(ModBlocks.STRIPPED_POPLAR_LOG.get()));
+        leavesBlock(ModBlocks.FREMONT_COTTONWOOD_LEAVES);
+        saplingBlock(ModBlocks.FREMONT_COTTONWOOD_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_FREMONT_COTTONWOOD_SAPLING.get(), models().singleTexture("potted_fremont_cottonwood_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.FREMONT_COTTONWOOD_SAPLING.get())).renderType("cutout"));
+        leavesBlock(ModBlocks.BLACK_POPLAR_LEAVES);
+        saplingBlock(ModBlocks.BLACK_POPLAR_SAPLING);
+        simpleBlockWithItem(ModBlocks.POTTED_BLACK_POPLAR_SAPLING.get(), models().singleTexture("potted_black_poplar_sapling",
+                new ResourceLocation("flower_pot_cross"), "plant", blockTexture(ModBlocks.BLACK_POPLAR_SAPLING.get())).renderType("cutout"));
+
         blockItem(ModBlocks.ARAUCARIA_LOG);
         blockItem(ModBlocks.ARAUCARIA_WOOD);
         blockItem(ModBlocks.STRIPPED_ARAUCARIA_LOG);
@@ -318,6 +349,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_CITRUS_LOG);
         blockItem(ModBlocks.STRIPPED_CITRUS_WOOD);
         blockWithItem(ModBlocks.CITRUS_PLANKS);
+
+        blockItem(ModBlocks.STARFRUIT_LOG);
+        blockItem(ModBlocks.STARFRUIT_WOOD);
+        blockItem(ModBlocks.STRIPPED_STARFRUIT_LOG);
+        blockItem(ModBlocks.STRIPPED_STARFRUIT_WOOD);
+        blockWithItem(ModBlocks.STARFRUIT_PLANKS);
+
+        blockItem(ModBlocks.POPLAR_LOG);
+        blockItem(ModBlocks.POPLAR_WOOD);
+        blockItem(ModBlocks.STRIPPED_POPLAR_LOG);
+        blockItem(ModBlocks.STRIPPED_POPLAR_WOOD);
+        blockWithItem(ModBlocks.POPLAR_PLANKS);
 
         simpleBlockWithItem(ModBlocks.BASIL.get(), models().cross(blockTexture(ModBlocks.BASIL.get()).getPath(),
                 blockTexture(ModBlocks.BASIL.get())).renderType("cutout"));
