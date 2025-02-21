@@ -96,6 +96,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.STRIPPED_CITRUS_LOG.get())
                 .add(ModBlocks.CITRUS_WOOD.get())
                 .add(ModBlocks.STRIPPED_CITRUS_WOOD.get())
+
+                .add(ModBlocks.STARFRUIT_LOG.get())
+                .add(ModBlocks.STRIPPED_STARFRUIT_LOG.get())
+                .add(ModBlocks.STARFRUIT_WOOD.get())
+                .add(ModBlocks.STRIPPED_STARFRUIT_WOOD.get())
+
+                .add(ModBlocks.POPLAR_LOG.get())
+                .add(ModBlocks.STRIPPED_POPLAR_LOG.get())
+                .add(ModBlocks.POPLAR_WOOD.get())
+                .add(ModBlocks.STRIPPED_POPLAR_WOOD.get())
         ;
 
         this.tag(BlockTags.PLANKS)
@@ -114,6 +124,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.AVOCADO_PLANKS.get())
                 .add(ModBlocks.STRAWBERRY_TREE_PLANKS.get())
                 .add(ModBlocks.CITRUS_PLANKS.get())
+                .add(ModBlocks.STARFRUIT_PLANKS.get())
+                .add(ModBlocks.POPLAR_PLANKS.get())
 
         ;
 

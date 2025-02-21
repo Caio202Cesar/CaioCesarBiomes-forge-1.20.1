@@ -67,6 +67,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_FIG_WOOD.get());
         this.dropSelf(ModBlocks.FIG_PLANKS.get());
         this.dropSelf(ModBlocks.FIG_SAPLING.get());
+        this.add(ModBlocks.POTTED_FIG_SAPLING.get(), createPotFlowerItemTable(ModBlocks.FIG_SAPLING.get()));
         this.dropSelf(ModBlocks.WEEPING_FIG_SAPLING.get());
         this.add(ModBlocks.POTTED_WEEPING_FIG_SAPLING.get(), createPotFlowerItemTable(ModBlocks.WEEPING_FIG_SAPLING.get()));
         this.add(ModBlocks.WEEPING_FIG_LEAVES.get(), block ->
