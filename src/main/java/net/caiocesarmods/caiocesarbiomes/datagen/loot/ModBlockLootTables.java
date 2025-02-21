@@ -217,9 +217,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 createLeavesDrops(block, ModBlocks.FREMONT_COTTONWOOD_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.dropSelf(ModBlocks.BASIL.get());
-        this.add(ModBlocks.POTTED_BASIL.get(), createPotFlowerItemTable(ModBlocks.BASIL.get()));
         this.dropSelf(ModBlocks.PURPLE_BASIL.get());
-        this.add(ModBlocks.POTTED_PURPLE_BASIL.get(), createPotFlowerItemTable(ModBlocks.PURPLE_BASIL.get()));
     }
 
     @Override

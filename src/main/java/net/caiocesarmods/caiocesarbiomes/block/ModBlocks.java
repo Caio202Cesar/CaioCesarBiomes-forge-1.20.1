@@ -431,12 +431,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> PURPLE_BASIL = registerBlock("purple_basil",
             () -> new FlowerBlock(() -> MobEffects.HERO_OF_THE_VILLAGE, 6,
                     BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
-    public static final RegistryObject<Block> POTTED_BASIL = BLOCKS.register("potted_basil",
-            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.BASIL,
-                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
-    public static final RegistryObject<Block> POTTED_PURPLE_BASIL = registerBlock("potted_purple_basil",
-            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.PURPLE_BASIL,
-                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
 
     //Mediterranean Plants
 

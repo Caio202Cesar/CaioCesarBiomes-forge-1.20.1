@@ -49,8 +49,14 @@ public class CaioCesarBiomesMod {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.BASIL.getId(), ModBlocks.POTTED_BASIL);
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PURPLE_BASIL.getId(), ModBlocks.POTTED_PURPLE_BASIL);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.RED_KAPOK_SAPLING.getId(), ModBlocks.POTTED_RED_KAPOK_SAPLING);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.AVOCADO_SAPLING.getId(), ModBlocks.POTTED_AVOCADO_SAPLING);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.FREMONT_COTTONWOOD_SAPLING.getId(), ModBlocks.POTTED_FREMONT_COTTONWOOD_SAPLING);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.BLACK_POPLAR_SAPLING.getId(), ModBlocks.POTTED_BLACK_POPLAR_SAPLING);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.TAHITI_LIME_SAPLING.getId(), ModBlocks.POTTED_TAHITI_LIME_SAPLING);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.LEMON_SAPLING.getId(), ModBlocks.POTTED_LEMON_SAPLING);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CITRON_SAPLING.getId(), ModBlocks.POTTED_CITRON_SAPLING);
+
         });
 
     }
